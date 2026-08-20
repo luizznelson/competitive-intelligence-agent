@@ -1392,7 +1392,14 @@ with agent_tab:
 
     if "agent_messages" not in st.session_state:
         st.session_state.agent_messages = []
-    if "agent_question_draft" not in st.session_state:
+    # A widget's session_state key can only be assigned before that widget is
+    # instantiated in a run — Streamlit raises StreamlitAPIException otherwise.
+    # The "clear history" button lives below the text_area, so it can't reset
+    # agent_question_draft directly; it sets this flag and reruns, and the
+    # reset happens here, before the text_area below is created.
+    if st.session_state.pop("_clear_agent_question_draft", False):
+        st.session_state.agent_question_draft = ""
+    elif "agent_question_draft" not in st.session_state:
         st.session_state.agent_question_draft = ""
 
     st.html(
@@ -1517,7 +1524,7 @@ with agent_tab:
 
         if st.button("Limpar histórico da sessão", key="clear_agent_history"):
             st.session_state.agent_messages = []
-            st.session_state.agent_question_draft = ""
+            st.session_state["_clear_agent_question_draft"] = True
             st.rerun()
 
     st.write("")
