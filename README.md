@@ -211,7 +211,7 @@ Acesse `http://localhost:8501`. Para habilitar a IA nesse modo, defina apenas `G
 docker compose exec dashboard pytest -q
 ```
 
-Suíte com 32 testes. Na revisão desta documentação, 30 passam; 2 falham em `tests/test_catalog_config.py` porque ainda assumem o catálogo antigo (20 produtos, e um produto sem MPN cadastrado) — deixado registrado aqui como pendência real de manutenção, não escondido.
+Suíte com 33 testes, todos passando na revisão desta documentação — inclui um teste que reproduz booleanos vindos do SQLite como `int64` (0/1), caso que já causou um bug real no deploy público (ver [`docs/case-study.md`](docs/case-study.md)).
 
 ## Limitações
 
@@ -228,8 +228,7 @@ Suíte com 32 testes. Na revisão desta documentação, 30 passam; 2 falham em `
 - alertas por e-mail/Slack para movimentos relevantes;
 - scheduler gerenciado para coleta contínua fora do ambiente local;
 - API para consumo externo dos indicadores;
-- avaliação formal das respostas do agente de IA;
-- corrigir a suíte de testes do catálogo para refletir o tamanho atual.
+- avaliação formal das respostas do agente de IA.
 
 ## Stack
 

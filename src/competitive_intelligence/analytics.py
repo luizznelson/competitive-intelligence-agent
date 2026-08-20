@@ -13,6 +13,21 @@ def _read_sql(query: str, params: dict | None = None) -> pd.DataFrame:
         return pd.read_sql(text(query), conn, params=params or {})
 
 
+def success_bool_mask(success: pd.Series) -> pd.Series:
+    """Strict True/False mask for a two-state boolean column (e.g. `success`).
+
+    PostgreSQL returns real booleans, but the SQLite demo snapshot surfaces
+    boolean columns to pandas as int64 0/1. `~series.fillna(False)` on an
+    int64 series performs a bitwise NOT (0 -> -1, 1 -> -2) instead of a
+    logical negation, which breaks `.loc[]`/`.iloc[]` boolean indexing.
+    Casting to bool first makes the negation correct under both backends.
+
+    Only use this for genuinely two-state columns. `available` is tri-state
+    (True / False / unknown) and must not be coerced through this helper.
+    """
+    return success.fillna(False).astype(bool)
+
+
 def observations_frame() -> pd.DataFrame:
     return _read_sql(
         """

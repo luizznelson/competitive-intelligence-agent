@@ -109,6 +109,10 @@ Um dashboard pode induzir conclusões erradas se tratar uma única coleta como t
 
 O projeto introduziu uma métrica de maturidade do histórico e comunica explicitamente quando os dados só permitem uma fotografia atual.
 
+## PostgreSQL e SQLite não tipam booleano da mesma forma
+
+O deploy público expôs um problema real que não aparecia em ambiente local com PostgreSQL: o snapshot SQLite entrega colunas booleanas ao Pandas como `int64` (0/1), não como `bool`. Um trecho do dashboard fazia `~obs["success"].fillna(False)` para isolar falhas — em `int64`, `~` é NOT bit a bit, não negação lógica (`~0` vira `-1`, `~1` vira `-2`), e `.loc[]` interpretava esses valores como rótulos de índice inexistentes, gerando `KeyError`. A correção converte explicitamente para `bool` antes de negar (`success.fillna(False).astype(bool)`), centralizada em `analytics.success_bool_mask()` e coberta por um teste que reproduz `success` como `int64` 0/1. A mesma lógica não foi aplicada a `available`, que é tri-state (`True` / `False` / desconhecido) e perderia informação se fosse forçado para booleano estrito.
+
 ## Disponibilidade não é ausência de dado
 
 Uma decisão de modelagem que só ficou clara durante o desenvolvimento: `success=true` com `available=false` é um resultado válido — a página foi coletada e a oferta foi identificada como esgotada — não uma falha do pipeline. Essa distinção é o que permite ao analytics excluir corretamente ofertas indisponíveis do cálculo de menor/mediana/maior preço atual, sem descartar a observação do histórico, onde ela continua servindo como sinal competitivo (ex.: uma fonte que fica esgotada com frequência é, em si, informação de mercado). Sem separar `sem coleta`, `erro de coleta`, `produto sem estoque` e `oferta disponível` como quatro estados distintos, o dashboard teria misturado ruído operacional com sinal de mercado.

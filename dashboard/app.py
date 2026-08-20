@@ -37,6 +37,7 @@ from src.competitive_intelligence.analytics import (
     product_listing_status,
     recent_changes,
     source_summary,
+    success_bool_mask,
 )
 from src.competitive_intelligence.db import init_db, seed_catalog
 from src.competitive_intelligence.config import (
@@ -1686,7 +1687,11 @@ with quality_tab:
         ]
         st.dataframe(obs_display, width="stretch", hide_index=True)
 
-        failures = obs[~obs["success"].fillna(False)].copy() if "success" in obs.columns else pd.DataFrame()
+        if "success" in obs.columns:
+            success_mask = success_bool_mask(obs["success"])
+            failures = obs.loc[~success_mask].copy()
+        else:
+            failures = pd.DataFrame()
         if not failures.empty:
             st.write("")
             section_header(
