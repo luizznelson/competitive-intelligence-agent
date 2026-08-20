@@ -54,7 +54,7 @@ GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-20b")
 
 # Public AI analyst safeguards
 AI_MAX_QUESTION_CHARS = max(100, int(os.getenv("AI_MAX_QUESTION_CHARS", "500")))
-AI_MAX_COMPLETION_TOKENS = max(128, min(2048, int(os.getenv("AI_MAX_COMPLETION_TOKENS", "700"))))
+AI_MAX_COMPLETION_TOKENS = max(128, min(2048, int(os.getenv("AI_MAX_COMPLETION_TOKENS", "900"))))
 AI_MAX_STEPS = max(1, min(4, int(os.getenv("AI_MAX_STEPS", "3"))))
 AI_MAX_TOOL_CALLS = max(1, min(8, int(os.getenv("AI_MAX_TOOL_CALLS", "5"))))
 AI_MAX_TOOL_RESULT_CHARS = max(2000, min(30000, int(os.getenv("AI_MAX_TOOL_RESULT_CHARS", "10000"))))

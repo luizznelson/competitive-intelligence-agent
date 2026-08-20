@@ -36,6 +36,9 @@ Quando fizer sentido, organize a resposta em: Achado, Evidência e Limitação/P
 Se já tiver informação suficiente, responda sem chamar novas ferramentas.
 Não repita a mesma chamada de ferramenta na mesma análise.
 Responda em português do Brasil de forma executiva, clara e objetiva.
+Sua resposta final tem um orçamento de tokens limitado: seja direto, priorize os 2-3 pontos mais
+relevantes em vez de cobrir todos os dados disponíveis, e nunca gaste esse orçamento em raciocínio
+interno — vá direto à resposta.
 """
 
 
@@ -146,6 +149,13 @@ async def ask_agent(
         used_tool_calls = 0
         seen_tool_calls: set[str] = set()
 
+        # Reasoning-capable models (the default openai/gpt-oss-20b included) can burn the
+        # entire max_completion_tokens budget on hidden chain-of-thought and return an
+        # empty final answer with finish_reason == "tool_calls" and content == None.
+        # Capping reasoning effort leaves tokens for the actual answer. Only sent for
+        # models known to support it, since Groq rejects unknown fields for others.
+        extra_params = {"reasoning_effort": "low"} if "gpt-oss" in GROQ_MODEL else {}
+
         for _ in range(step_budget):
             try:
                 response = groq.chat.completions.create(
@@ -155,6 +165,7 @@ async def ask_agent(
                     tool_choice="auto",
                     temperature=0.1,
                     max_completion_tokens=AI_MAX_COMPLETION_TOKENS,
+                    **extra_params,
                 )
             except Exception as exc:  # SDK exception classes vary across supported versions.
                 _raise_safe_api_error(exc)
