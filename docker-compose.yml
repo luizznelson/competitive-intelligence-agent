@@ -1,0 +1,47 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: competitive
+      POSTGRES_USER: competitive
+      POSTGRES_PASSWORD: competitive
+    ports:
+      - "5433:5432"
+    volumes:
+      - competitive_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U competitive -d competitive"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  dashboard:
+    build: .
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://competitive:competitive@db:5432/competitive
+    ports:
+      - "8501:8501"
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - .:/app
+
+  scheduler:
+    build: .
+    command: ["python", "scripts/run_scheduler.py"]
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://competitive:competitive@db:5432/competitive
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - .:/app
+    profiles: ["scheduler"]
+
+volumes:
+  competitive_pgdata:

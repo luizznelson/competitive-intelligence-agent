@@ -1,0 +1,1422 @@
+products:
+- canonical_id: logitech-g305-black
+  canonical_name: Logitech G305 LIGHTSPEED Preto 910-005281
+  brand: Logitech
+  model: G305 LIGHTSPEED
+  mpn: 910-005281
+  category: Mouse
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/97092/mouse-gamer-sem-fio-logitech-g305-lightspeed-12000-dpi-6-botoes-preto-910-005281
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/mouse-gamer-logitech-g305-wireless-12000-dpi-6-botoes-preto-910-005281
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/9580/mouse-gamer-logitech-lightspeed-g305-6-botoes-12000-dpi-usb-preto
+  - competitor: magalu
+    active: false
+    url: https://www.magazineluiza.com.br/mouse-gamer-sem-fio-logitech-g305-lightspeed-12000-dpi-6-botoes-preto-910-005281/p/fg433h2143/in/mger/
+- canonical_id: kingston-nv3-500gb
+  canonical_name: Kingston NV3 500GB NVMe SNV3S/500G
+  brand: Kingston
+  model: NV3 500GB
+  mpn: SNV3S/500G
+  category: SSD
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/621161/ssd-kingston-nv3-500-gb-m-2-2280-pcie-4-0-x4-nvme-leitura-5000-mb-s-gravacao-3000-mb-s-azul-snv3s-500g
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/ssd-kingston-nv3-500gb-m-2-2280-pcie-nvme-leitura-5000mb-s-gravacao-3000mb-s-snv3s-500g
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/31563/ssd-kingston-nv3-500gb-m2-nvme-2280-pcie-40-leitura-5000mbs-e-gravacao-3000mbs-snv3s500g
+- canonical_id: kingston-nv3-1tb
+  canonical_name: Kingston NV3 1TB NVMe SNV3S/1000G
+  brand: Kingston
+  model: NV3 1TB
+  mpn: SNV3S/1000G
+  category: SSD
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/621162/ssd-kingston-nv3-1-tb-m-2-2280-pcie-4-0-x4-nvme-leitura-6000-mb-s-gravacao-4000-mb-s-azul-snv3s-1000g
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/ssd-kingston-nv3-1tb-m-2-2280-pcie-nvme-leitura-6000mb-s-gravacao-4000mb-s-snv3s-1000g
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/31564/ssd-kingston-nv3-1tb-m2-nvme-2280-pcie-40-leitura-6000mbs-e-gravacao-4000mbs-snv3s1000g
+  - competitor: magalu
+    active: false
+    url: https://www.magazineluiza.com.br/ssd-kingston-nv3-1-tb-m-2-2280-pcie-4-0-x4-nvme-leitura-6000-mb-s-gravacao-4000-mb-s-azul-snv3s-1000g/p/gc8gk37af3/in/ssdi/
+- canonical_id: wd-blue-sn580-1tb
+  canonical_name: WD Blue SN580 1TB NVMe WDS100T3B0E
+  brand: Western Digital
+  model: Blue SN580 1TB
+  mpn: WDS100T3B0E
+  category: SSD
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/495571/ssd-wd-blue-sn580-nvme-1t-m-2-pcle-gen4-leitura-4150-e-gravacao-4150-azul-wds100t3b0e
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/ssd-wd-blue-sn580-1tb-m-2-2280-pcie-nvme-leitura-4150mb-s-gravacao-4150mb-s-wds100t3b0e
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/26955/ssd-wd-blue-sa580-m2-2280-nvme-1tb-leitura-4150mbs-e-gravacao-4150mbs-wds100t3b0e
+- canonical_id: crucial-p3-plus-1tb
+  canonical_name: Crucial P3 Plus 1TB NVMe CT1000P3PSSD8
+  brand: Crucial
+  model: P3 Plus 1TB
+  mpn: CT1000P3PSSD8
+  category: SSD
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/378461/ssd-crucial-p3-plus-1tb-3d-nand-m-2-nvme-leitura-5000mb-s-e-gravacao-3600mb-s-preto-ct1000p3pssd8
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/ssd-crucial-p3-plus-1tb-m-2-2280-pcie-nvme-leitura-5000mb-s-gravacao-3600mb-s-ct1000p3pssd8
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/29688/ssd-crucial-p3-plus-1tb-m2-2280-pcie-nvme-leitura-5000mbs-gravacao-3600mbs-ct1000p3pssd8
+- canonical_id: kingston-a400-240gb
+  canonical_name: Kingston A400 240GB SATA SA400S37/240G
+  brand: Kingston
+  model: A400 240GB
+  mpn: SA400S37/240G
+  category: SSD
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/85197/ssd-kingston-a400-240gb-sata-iii-2-5-leitura-500mb-s-gravacao-350mb-s-preto-sa400s37-240g
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/ssd-kingston-a400-240gb-2-5-sata-iii-6gb-s-leitura-500mb-s-gravacao-350mb-s-sa400s37-240g
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/7443/ssd-kingston-a400-240gb-sa400s37240g-sata-iii-leitura-500mbs-gravacao-350mbs
+- canonical_id: kingston-a400-480gb
+  canonical_name: Kingston A400 480GB SATA SA400S37/480G
+  brand: Kingston
+  model: A400 480GB
+  mpn: SA400S37/480G
+  category: SSD
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/85198/ssd-kingston-a400-480gb-sata-iii-2-5-leitura-500mb-s-gravacao-450mb-s-preto-sa400s37-480g
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/ssd-kingston-a400-480gb-2-5-sata-iii-6gb-s-leitura-500mb-s-gravacao-450mb-s-sa400s37-480g
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/19382/ssd-kingston-a400-480gb-sata-iii-leitura-500mbs-gravacao-450mbs-sa400s37480g-imp
+- canonical_id: kingston-a400-960gb
+  canonical_name: Kingston A400 960GB SATA SA400S37/960G
+  brand: Kingston
+  model: A400 960GB
+  mpn: SA400S37/960G
+  category: SSD
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/95217/ssd-kingston-a400-960gb-sata-iii-2-5-leitura-500mb-s-gravacao-450mb-s-preto-sa400s37-960g
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/ssd-kingston-a400-960gb-2-5-sata-iii-6gb-s-leitura-500mb-s-gravacao-450mb-s-sa400s37-960g
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/19384/ssd-kingston-a400-960gb-sata-iii-leitura-500mbs-e-gravacao-450mbs-sa400s37960g-imp
+- canonical_id: kingston-nv3-2tb
+  canonical_name: Kingston NV3 2TB NVMe SNV3S/2000G
+  brand: Kingston
+  model: NV3 2TB
+  mpn: SNV3S/2000G
+  category: SSD
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/621163/ssd-kingston-nv3-2tb-m-2-2280-pcie-4-0-x4-nvme-leitura-6000-mb-s-gravacao-5000-mb-s-azul-snv3s-2000g
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/ssd-kingston-nv3-2tb-m-2-2280-pcie-nvme-leitura-6000mb-s-gravacao-5000mb-s-snv3s-2000g
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/31565/ssd-kingston-nv3-2tb-m2-nvme-2280-pcie-40-leitura-6000mbs-e-gravacao-5000mbs-snv3s2000g
+- canonical_id: logitech-g203-black
+  canonical_name: Logitech G203 LIGHTSYNC Preto 910-005793
+  brand: Logitech
+  model: G203 LIGHTSYNC Preto
+  mpn: 910-005793
+  category: Mouse
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/112948/mouse-gamer-logitech-g203-lightsync-rgb-efeito-de-ondas-de-cores-6-botoes-programaveis-e-ate-8-000-dpi-preto-910-005793
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/mouse-gamer-logitech-g203-rgb-8000dpi-6-botoes-preto-910-005793
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/13881/mouse-gamer-logitech-g203-lightsync-rgb-6-botoes-progrmaveis-8000-dpi-black-910-005793
+- canonical_id: logitech-g203-white
+  canonical_name: Logitech G203 LIGHTSYNC Branco 910-005794
+  brand: Logitech
+  model: G203 LIGHTSYNC Branco
+  mpn: 910-005794
+  category: Mouse
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/112947/mouse-gamer-logitech-g203-lightsync-rgb-efeito-de-ondas-de-cores-6-botoes-programaveis-e-ate-8-000-dpi-branco-910-005794
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/mouse-gamer-logitech-g203-rgb-8000dpi-6-botoes-branco-910-005794
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/13882/mouse-gamer-logitech-g203-lightsync-rgb-6-botoes-programaveis-8000-dpi-white-910-005794
+- canonical_id: logitech-g203-blue
+  canonical_name: Logitech G203 LIGHTSYNC Azul 910-005795
+  brand: Logitech
+  model: G203 LIGHTSYNC Azul
+  mpn: 910-005795
+  category: Mouse
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/120485/mouse-gamer-logitech-g203-lightsync-rgb-efeito-de-ondas-de-cores-6-botoes-programaveis-e-ate-8-000-dpi-azul-910-005795
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/mouse-gamer-logitech-g203-rgb-8000dpi-6-botoes-azul-910-005795
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/23359/mouse-gamer-logitech-g203-lightsync-rgb-8000-dpi-6-botoes-programaveis-blue-910-005795
+- canonical_id: logitech-g203-lilac
+  canonical_name: Logitech G203 LIGHTSYNC Lilás 910-005852
+  brand: Logitech
+  model: G203 LIGHTSYNC Lilás
+  mpn: 910-005852
+  category: Mouse
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/134252/mouse-gamer-logitech-g203-lightsync-rgb-efeito-de-ondas-de-cores-6-botoes-programaveis-e-ate-8-000-dpi-lilas-910-005852
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/mouse-gamer-logitech-g203-rgb-8000dpi-6-botoes-lilas-910-005852
+- canonical_id: logitech-g435-black
+  canonical_name: Logitech G435 LIGHTSPEED Preto 981-001049
+  brand: Logitech
+  model: G435 Preto
+  mpn: 981-001049
+  category: Headset
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/263077/headset-gamer-sem-fio-logitech-g435-lightspeed-e-bluetooth-dolby-atmos-usb-pc-ps4-ps5-mobile-drivers-40mm-preto-981-001049
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/headset-gamer-logitech-g435-wireless-drivers-40mm-preto-981-001049
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/21756/headset-gamer-logitech-g435-lightspeed-wireless-bluetooth-dolby-atmos-drivers-40mm-pc-ps4-ps5-preto-981-001049
+- canonical_id: logitech-g435-white
+  canonical_name: Logitech G435 LIGHTSPEED Branco 981-001073
+  brand: Logitech
+  model: G435 Branco
+  mpn: 981-001073
+  category: Headset
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/263078/headset-gamer-sem-fio-logitech-g435-lightspeed-e-bluetooth-dolby-atmos-usb-pc-ps4-ps5-mobile-drivers-40mm-branco-981-001073
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/headset-gamer-logitech-g435-wireless-drivers-40mm-branco-981-001073
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/26291/headset-gamer-logitech-g435-lightspeed-bluetooth-sem-fio-usb-drivers-de-40mm-white-981-001073
+- canonical_id: logitech-g435-blue
+  canonical_name: Logitech G435 LIGHTSPEED Azul 981-001061
+  brand: Logitech
+  model: G435 Azul
+  mpn: 981-001061
+  category: Headset
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/263079/headset-gamer-sem-fio-logitech-g435-lightspeed-e-bluetooth-dolby-atmos-usb-pc-ps4-ps5-mobile-drivers-40mm-azul-981-001061
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/headset-gamer-logitech-g435-wireless-drivers-40mm-azul-981-001061
+- canonical_id: kingston-fury-beast-16gb-3200
+  canonical_name: Kingston Fury Beast 16GB DDR4 3200 KF432C16BB1/16
+  brand: Kingston
+  model: Fury Beast 16GB 3200
+  mpn: KF432C16BB1/16
+  category: Memória RAM
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/172366/memoria-ram-kingston-fury-beast-16gb-3200mhz-ddr4-cl16-preto-kf432c16bb1-16
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/memoria-kingston-fury-beast-16gb-1x16gb-ddr4-3200mhz-c16-preto-kf432c16bb1-16
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/19158/memoria-kingston-fury-beast-16gb-3200mhz-ddr4-cl16-preto-kf432c16bb116
+- canonical_id: kingston-fury-beast-16gb-kit-3200
+  canonical_name: Kingston Fury Beast 16GB Kit 2x8GB DDR4 3200 KF432C16BBK2/16
+  brand: Kingston
+  model: Fury Beast 16GB Kit 2x8 3200
+  mpn: KF432C16BBK2/16
+  category: Memória RAM
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/193500/memoria-ram-kingston-fury-beast-16gb-2x8gb-3200mhz-ddr4-cl16-preto-kf432c16bbk2-16
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/memoria-kingston-fury-beast-16gb-2x8gb-ddr4-3200mhz-c16-preto-kf432c16bbk2-16
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/19317/memoria-kingston-fury-beast-16gb-2x8gb-3200mhz-ddr4-black-kf432c16bbk216
+- canonical_id: kingston-fury-beast-8gb-3200
+  canonical_name: Kingston Fury Beast 8GB DDR4 3200 KF432C16BB/8
+  brand: Kingston
+  model: Fury Beast 8GB 3200
+  mpn: KF432C16BB/8
+  category: Memória RAM
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/172365/memoria-ram-kingston-fury-beast-8gb-3200mhz-ddr4-cl16-preto-kf432c16bb-8
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/memoria-kingston-fury-beast-8gb-1x8gb-ddr4-3200mhz-c16-preta-kf432c16bb-8
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/19314/memoria-kingston-fury-beast-8gb-3200mhz-ddr4-black-kf432c16bb8
+- canonical_id: logitech-k380
+  canonical_name: Logitech K380 Multi-Device 920-007564
+  brand: Logitech
+  model: K380 Multi-Device
+  mpn: 920-007564
+  category: Teclado
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/76576/teclado-sem-fio-logitech-k380-com-bluetooth-easy-switch-para-3-dispositivos-para-pc-mac-chrome-android-ios-apple-tv-cinza-920-007564
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/teclado-logitech-k380-multi-device-preto-920-007564
+- canonical_id: asus-va27ehe
+  canonical_name: Monitor Gamer Asus Eye Care 27 Pol, Widescreen, Full HD, FreeSync
+  brand: Asus
+  model: VA27EHE
+  mpn: VA27EHE
+  category: Monitor
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/14547/monitor-gamer-asus-eye-care-27-pol-widescreen-full-hd-75hz-hdmi-ips-va27ehe
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/monitor-gamer-asus-27-pol-5ms-75hz-freesync-hdmi-vga-va27ehe
+- canonical_id: lenovo-83gl000vbr
+  canonical_name: Notebook Lenovo V15, 15.6 Pol, Intel Core i5-13420H, FHD, 16GB DDR4,
+    SSD 512GB, Windows 11 Pro, Intel UHD, Cinza, 83GL000VBR
+  brand: Lenovo
+  model: 83GL000VBR
+  mpn: 83GL000VBR
+  category: SSD
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/notebook-lenovo-v15-15-6-pol-intel-core-i5-13420h-fhd-16gb-ddr4-ssd-512gb-windows-11-pro-intel-uhd-cinza-83gl000vbr
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/36188/notebook-lenovo-v15-g4-iru-intel-core-i5-13420h-16gb-ddr4-ssd-512gb-156-pol-full-hd-intel-uhd-graphics-windows-11-preto-83gl000vbr
+- canonical_id: toshiba-hdwg51gxzsta
+  canonical_name: HD Toshiba N300 NAS, 16TB, 3.5, 7200RPM, Sata III 6GB/s, Cache 512MB,
+    HDWG51GXZSTA
+  brand: Toshiba
+  model: HDWG51GXZSTA
+  mpn: HDWG51GXZSTA
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/hd-toshiba-n300-nas-16tb-3-5-7200rpm-sata-iii-6gb-s-cache-512mb-hdwg51gxzsta
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/40206/hd-toshiba-n300-16tb-7200rpm-512mb-nas-35-aplicacao-em-ia-hdwg51gxzsta
+- canonical_id: corsair-cssd-f1000gbmp600ecs
+  canonical_name: SSD Corsair MP600 Elite, 1TB, M.2 NVMe, Leitura 7000MB/s e Gravação
+    6200MB/s, Para PS5, Branco - CSSD-F1000GBMP600ECS
+  brand: Corsair
+  model: CSSD-F1000GBMP600ECS
+  mpn: CSSD-F1000GBMP600ECS
+  category: SSD
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/542150/ssd-corsair-mp600-elite-1tb-m-2-nvme-leitura-7000mb-s-e-gravacao-6200mb-s-para-ps5-branco-cssd-f1000gbmp600ecs
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/ssd-corsair-mp600-elite-for-ps5-1tb-m-2-2280-pcie-nvme-leitura-7000mb-s-gravacao-6200mb-s-cssd-f1000gbmp600ecs
+- canonical_id: cooler-master-mb600l2-kn5n-s00
+  canonical_name: Gabinete Cooler Master Masterbox MB600L V2, Mid Tower, Lateral de
+    Aco, Preto, MB600L2-KN5N-S00
+  brand: Cooler Master
+  model: MB600L2-KN5N-S00
+  mpn: MB600L2-KN5N-S00
+  category: Cooler
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/gabinete-cooler-master-masterbox-mb600l-v2-mid-tower-lateral-de-aco-preto-mb600l2-kn5n-s00
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/24493/gabinete-gamer-cooler-master-masterbox-mb600l-v2-steel-mid-tower-black-sem-fonte-com-1-fan-com-odd-mb600l2-knnn-s00
+- canonical_id: cougar-385ka10-0002
+  canonical_name: Gabinete Gamer Cougar FV150, RGB, Mid-Tower, Lateral de Vidro, Com
+    4 Fans, Branco, 385KA10.0002
+  brand: Cougar
+  model: 385KA10.0002
+  mpn: 385KA10.0002
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/gabinete-gamer-cougar-fv150-rgb-mid-tower-lateral-de-vidro-com-4-fans-branco-385ka10-0002
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/35028/gabinete-gamer-cougar-fv150-rgb-white-mid-tower-vidro-temperado-atx-com-4-fans-branco-385ka100002
+- canonical_id: jbl-jbllive770ncblk
+  canonical_name: Fone de Ouvido JBL Live 770NC, Bluetooth, Preto, JBLLIVE770NCBLK
+  brand: JBL
+  model: JBLLIVE770NCBLK
+  mpn: JBLLIVE770NCBLK
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/fone-de-ouvido-jbl-live-770nc-wireless-preto-jbllive770ncblk
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/544590/fone-de-ouvido-jbl-live-770nc-bluetooth-5-3-cancelamento-de-ruido-preto-jbllive770ncblk
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/36229/headphone-jbl-live-770nc-bluetooth-drivers-de-40mm-preto-jbllive770ncblk
+- canonical_id: intel-bx80684i59500
+  canonical_name: Processador Intel Core i5-9500, 6-Core, 6-Threads, 3.0GHz (4,4 GHz
+    Turbo), Cache 9MB, LGA1151, BX80684I59500
+  brand: Intel
+  model: BX80684I59500
+  mpn: BX80684I59500
+  category: Processador
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/processador-intel-core-i5-9500-6-core-6-threads-3-0ghz-4-4-ghz-turbo-cache-9mb-lga1151-bx80684i59500
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/18680/processador-intel-core-i5-9500-30ghz-440ghz-turbo-9-geracao-6-core-6-thread-lga-1151-bx80684i59500
+- canonical_id: be-quiet-bgw67
+  canonical_name: Gabinete Gamer Be Quiet! Light Base 600 LX, ARGB, Mid-Tower, LAteral
+    de Vidro, Com 4 Fans, Preto, BGW67
+  brand: Be Quiet!
+  model: BGW67
+  mpn: BGW67
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/gabinete-gamer-be-quiet-light-base-600-lx-argb-mid-tower-lateral-de-vidro-com-4-fans-preto-bgw67
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/33386/gabinete-gamer-be-quiet-light-base-600-lx-argb-mid-tower-atx-vidro-temperado-com-4-fans-preto-bgw67
+- canonical_id: pcyes-pvrtx30506blpe
+  canonical_name: Placa de Vídeo PCYES NVIDIA GeForce RTX 3050 Projeto Edge, 6GB,
+    GDDR6, DLSS, Ray Tracing, PVRTX30506BLPE
+  brand: PCYes
+  model: PVRTX30506BLPE
+  mpn: PVRTX30506BLPE
+  category: Placa de vídeo
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/34747/placa-de-video-pcyes-nvidia-geforce-rtx-3050-projeto-edge-6gb-gddr6-dlss-ray-tracing-pvrtx30506blpe
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/placa-de-video-pcyes-geforce-rtx-3050-projeto-edge-6gb-gddr6-96-bit-pvrtx30506blpe
+- canonical_id: redragon-controle-redragon-harrow-g808-pc-ps3
+  canonical_name: Controle Redragon Sem Fio Harrow G808, Para PC E PS3, Preto
+  brand: Redragon
+  model: Controle Redragon Sem Fio Harrow G808, Para PC E PS3, Preto
+  mpn: null
+  category: Hardware
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/251454/controle-redragon-sem-fio-harrow-g808-para-pc-e-ps3-preto
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/controle-redragon-harrow-wireless-windows-ps3-preto-g808-v2
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/27433/controle-gamer-redragon-harrow-sem-fio-usb-24gz-pcps3-preto-g808
+- canonical_id: redragon-k617rgb
+  canonical_name: Teclado Magnético Gamer Redragon Fizz, 60%, RGB, 8000Hz, Rapid Trigger,
+    Switch Linear, Preto - K617RGB-M
+  brand: Redragon
+  model: K617RGB-M
+  mpn: K617RGB-M
+  category: Teclado
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/999721
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/teclado-magnetico-redragon-fizz-rgb-abnt2-preto-k617rgb-m
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/40236/teclado-magnetico-gamer-redragon-fizz-rgb-60-8k-switch-magnetico-abnt2-preto-k617rgb-m
+- canonical_id: lian-li-ga2t36inb
+  canonical_name: Water Cooler Lian Li GA II Trinity SL-INF 360, RGB, 360mm, Preto,
+    GA2T36INB
+  brand: Lian Li
+  model: GA2T36INB
+  mpn: GA2T36INB
+  category: Cooler
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/water-cooler-lian-li-ga-ii-trinity-sl-inf-360-rgb-360mm-preto-ga2t36inb
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/26641/water-cooler-lian-li-galahad-ii-trinity-sl-inf-rgb-360mm-intel-amd-black-compativel-com-lga-1700-ga2t36inb
+- canonical_id: deepcool-dp-frgb-rf120-5c
+  canonical_name: Kit Ventoinhas DeepCool RF120M RGB 5x120mm, DP-FRGB-RF120-5C-M
+  brand: DeepCool
+  model: DP-FRGB-RF120-5C-M
+  mpn: DP-FRGB-RF120-5C-M
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/kit-ventoinhas-deepcool-rf120m-rgb-5x120mm-dp-frgb-rf120-5c-m
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/11517/kit-fan-com-5-unidades-deepcool-rf120m-rgb-120mm-dp-frgb-rf120-5c-m
+- canonical_id: crucial-ct1000bx500ssd1
+  canonical_name: SSD Crucial BX500 1TB SATA III 560MB/s Leitura | Terabyte
+  brand: Crucial
+  model: CT1000BX500SSD1
+  mpn: CT1000BX500SSD1
+  category: SSD
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/9257/ssd-crucial-bx500-1tb-leitura-560mbs-gravacao-510mbs-sata-3-ct1000bx500ssd1
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/ssd-crucial-bx500-1tb-2-5-sata-iii-6gb-s-leitura-540mb-s-gravac-o-500mb-s-ct1000bx500ssd1
+- canonical_id: skill-f4-2400c15d-16gvr
+  canonical_name: Memoria G.Skill Ripjaws V 16GB (2x8) DDR4 2400MHz Vermelha, F4-2400C15D-16GVR
+  brand: G.Skill
+  model: F4-2400C15D-16GVR
+  mpn: F4-2400C15D-16GVR
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/memoria-g-skill-ripjaws-v-series-ddr4-2400-2x8-16gb-f4-2400c15d-16gvr
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/6591/memoria-ddr4-gskill-ripjaws-v-f4-2400c15d-16gvr-16gb-2x8gb-2400mhz
+- canonical_id: gigabyte-g27f2
+  canonical_name: Monitor Gamer Gigabyte G27F2, 27 Pol, Full HD, 130% SRGB FreeSync,
+    165Hz, 1ms, IPS, HDMI/DP
+  brand: Gigabyte
+  model: G27F2
+  mpn: G27F2
+  category: Monitor
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/25055/monitor-gamer-gigabyte-g27f2-27-pol-full-hd-freesync-165hz-1ms-ips-hdmidp
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/monitor-gamer-gigabyte-g27f-2-27-pol-ips-fhd-1ms-165hz-dp-hdmi-g27f-2
+- canonical_id: dt3-14711
+  canonical_name: Cadeira Ergonomica DT3 Presidente Caeli, Dark Grey, 14711-4
+  brand: DT3
+  model: 14711-4
+  mpn: 14711-4
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/cadeira-ergonomica-dt3-presidente-caeli-dark-grey-14711-4
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/41266/cadeira-escritorio-presidente-dt3-caeli-dark-grey-ergonomica-ajustavel-3d-tecido-cinza-escuro-14711-4
+- canonical_id: redragon-k633rgb-pro-pt-brown
+  canonical_name: Teclado Redragon Ryze Pro RGB Wireless Switch Brown | Terabyte
+  brand: Redragon
+  model: K633RGB-PRO (PT-BROWN)
+  mpn: K633RGB-PRO (PT-BROWN)
+  category: Teclado
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/33655/teclado-mecanico-gamer-redragon-ryze-pro-rgb-wireless-bluetooth-switch-brown-abnt2-k633rgb-pro-pt-brown
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/teclado-mecanico-gamer-redragon-ryze-pro-rgb-wireless-switch-brown-k633rgb-pro-pt-brown
+- canonical_id: asrock-90-ga4lzz-00uanf
+  canonical_name: Placa de Video AsRock Radeon RX 7700 XT Phantom Gaming OC, 12GB,
+    GDDR6, 192-bit, 90-GA4LZZ-00UANF
+  brand: AsRock
+  model: 90-GA4LZZ-00UANF
+  mpn: 90-GA4LZZ-00UANF
+  category: Placa de vídeo
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/placa-de-video-asrock-radeon-rx-7700-xt-phantom-gaming-oc-12gb-gddr6-192-bit-90-ga4lzz-00uanf
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/25734/placa-de-video-asrock-amd-radeon-rx-7700-xt-phantom-gaming-oc-12gb-gddr6-fsr-ray-tracing-90-ga4lzz-00uanf
+- canonical_id: funko-funko-pop-naruto-shippuden-naruto-uzumaki-correndo
+  canonical_name: Funko Pop! Naruto Shippuden - Naruto Uzumaki Correndo
+  brand: Funko
+  model: Funko Pop! Naruto Shippuden - Naruto Uzumaki Correndo
+  mpn: null
+  category: Hardware
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/985179/funko-pop-naruto-shippuden-naruto-uzumaki-correndo
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/37088/funko-pop-naruto-shippuden-naruto-uzumaki-correndo-n-727
+- canonical_id: gamdias-boreas-e1-210-lite
+  canonical_name: Cooler Para Processador Gamdias Boreas E1-210 Lite, Raindow, 92mm,
+    Preto, BOREAS-E1-210-LITE
+  brand: Gamdias
+  model: BOREAS-E1-210-LITE
+  mpn: BOREAS-E1-210-LITE
+  category: Processador
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/cooler-para-processador-gamdias-boreas-e1-210-lite-raindow-92mm-preto-boreas-e1-210-lite
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/26422/cooler-para-processador-gamdias-boreas-e1-210-lite-92mm-intelamd-black
+- canonical_id: samsung-ls24am506nlmzd
+  canonical_name: Smart Monitor Samsung, 24 Pol, Full HD, IPS, Plataforma Tizen, HDMI/Bluetooth,
+    LS24AM506NLMZD
+  brand: Samsung
+  model: LS24AM506NLMZD
+  mpn: LS24AM506NLMZD
+  category: Monitor
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/19513/smart-monitor-samsung-24-pol-full-hd-ips-plataforma-tizen-hdmibluetooth-ls24am506nlmzd
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/monitor-smart-samsung-m5-24-ips-fhd-14ms-60hz-bluetooth-hdr-hdmi-ls24am506nlmzd
+- canonical_id: vx-pro-vx215z
+  canonical_name: Monitor VX PRO, 21.5 Pol, Full HD, 75Hz, 14ms, HDMI/VGA, VS215Z
+  brand: VX Pro
+  model: VX215Z
+  mpn: VX215Z
+  category: Monitor
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/22838/monitor-vx-pro-215-pol-led-60hz-8ms-hdmivga-vx215z
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/monitor-vx-pro-vx215z-21-5-pol-fhd-14ms-75hz-vx215z
+- canonical_id: liketec-lc-cb-opera-2085
+  canonical_name: Gabinete Gamer Liketec Opera Snow, Mid Tower, Lateral de Vidro,
+    Branco, LC-CB-OPERA-2085
+  brand: LikeTec
+  model: LC-CB-OPERA-2085
+  mpn: LC-CB-OPERA-2085
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/gabinete-gamer-liketec-opera-snow-mid-tower-lateral-de-vidro-branco-lc-cb-opera-2085
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/29738/gabinete-gamer-liketec-opera-snow-mid-tower-vidro-temperado-m-atx-white-sem-fonte-sem-fan-lc-cb-opera-2085
+- canonical_id: logitech-910-006756
+  canonical_name: Mouse Logitech M110 Silent USB Ambidestro Preto | Terabyte
+  brand: Logitech
+  model: 910-006756
+  mpn: 910-006756
+  category: Mouse
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/26882/mouse-logitech-m110-silent-usb-preto-910-006756
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/mouse-logitech-m110-silent-1000dpi-3-botoes-preto-910-006756
+- canonical_id: deepcool-ag400-bkammg2
+  canonical_name: Cooler Para Processador Deepcool AG400 G2, ARGB, 120mm, Preto, R-AG400-BKAMMG2-G
+  brand: DeepCool
+  model: R-AG400-BKAMMG2-G
+  mpn: R-AG400-BKAMMG2-G
+  category: Processador
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/cooler-para-processador-deepcool-ag400-g2-argb-120mm-preto-r-ag400-bkammg2-g
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/42937/air-cooler-para-processador-deepcool-ag400-g2-argb-120mm-intel-amd-preto-r-ag400-bkammg2-g
+- canonical_id: corsair-cmk16gx4m2z3200c16
+  canonical_name: Memória DDR4 Corsair Vengeance LPX 16GB 3200MHz | Terabyte
+  brand: Corsair
+  model: CMK16GX4M2Z3200C16
+  mpn: CMK16GX4M2Z3200C16
+  category: Memória RAM
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/40096/memoria-ddr4-corsair-vengeance-lpx-16gb-2x8gb-3200mhz-cmk16gx4m2z3200c16
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/memoria-corsair-vengeance-lpx-16gb-2x8-ddr4-3200mhz-c16-preto-cmk16gx4m2z3200c16
+- canonical_id: patriot-pbe480gs25ssdr
+  canonical_name: SSD Patriot Burst Elite, 480GB, Sata III 6GB/s, Leitura 450 MB/s,
+    Gravacao 320 MB/s, PBE480GS25SSDR
+  brand: Patriot
+  model: PBE480GS25SSDR
+  mpn: PBE480GS25SSDR
+  category: SSD
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/ssd-patriot-burst-elite-480gb-sata-iii-6gb-s-leitura-450-mb-s-gravacao-320-mb-s-pbe480gs25ssdr
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/29161/ssd-patriot-burst-elite-480gb-sata-iii-leitura-450mbs-e-gravacao-320mbs-pbe480gs25ssdr
+- canonical_id: hyperx-4p5p7aa
+  canonical_name: Microfone HyperX QuadCast S, USB, LED RGB, 4P5P7AA
+  brand: HyperX
+  model: 4P5P7AA
+  mpn: 4P5P7AA
+  category: Placa de vídeo
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/18708/microfone-hyperx-quadcast-s-usb-led-rgb-hmiq1s-xx-rgg
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/microfone-gamer-hyperx-quadcast-s-rgb-usb-preto-4p5p7aa
+- canonical_id: cooler-master-mpe-7502-acaag-br
+  canonical_name: Fonte Cooler Master G Gold V2 750W, 80 Plus Gold, PFC Ativo, MPE-7502-ACAAG-BR
+  brand: Cooler Master
+  model: MPE-7502-ACAAG-BR
+  mpn: MPE-7502-ACAAG-BR
+  category: Fonte
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/35918/fonte-cooler-master-g-gold-v2-750w-80-plus-gold-pfc-ativo-mpe-7502-acaag-br
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/fonte-cooler-master-g-gold-750-v2-750w-80-plus-gold-preto-mpe-7502-acaag-br
+- canonical_id: jbl-jblt530btbegbr
+  canonical_name: Fone de Ouvido On-Ear JBL Tune 530BT, Bluetooth, Bateria Longa DUração,
+    Som Pure Bass, Bege - JBLT530BTBEGBR
+  brand: JBL
+  model: JBLT530BTBEGBR
+  mpn: JBLT530BTBEGBR
+  category: Hardware
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/1004899
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/headphone-jbl-tune-530bt-drivers-33mm-bege-wireless-jblt530btbegbr
+- canonical_id: adata-ax4u360016g18i-sb10
+  canonical_name: Memoria Adata XPG Gammix D10, 16GB (1x16GB), DDR4, 3600MHz, C18,
+    Preto, AX4U360016G18I-SB10
+  brand: ADATA
+  model: AX4U360016G18I-SB10
+  mpn: AX4U360016G18I-SB10
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/memoria-adata-xpg-gammix-d10-16gb-1x16gb-ddr4-3600mhz-c18-preto-ax4u360016g18i-sb10
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/23022/memoria-ddr4-xpg-gammix-d10-16gb-3600mhz-cl18-black-ax4u360016g18i-sb10
+- canonical_id: cooler-master-cma-nest16xxwt1-gl
+  canonical_name: Kit Cabos Extensores Cooler Master 30cm Branco | Terabyte
+  brand: Cooler Master
+  model: CMA-NEST16XXWT1-GL
+  mpn: CMA-NEST16XXWT1-GL
+  category: Cooler
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/29946/kit-cabos-extensores-cooler-master-30cm-branco-cma-nest16xxwt1-gl
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/kit-cabo-sleeved-cooler-master-branco-cma-nest16xxwt1-gl
+- canonical_id: cooler-master-e500-knnn-s00
+  canonical_name: Gabinete Gamer Cooler Master Elite 500, Mid-Tower, Com 1 Fan, Preto,
+    E500-KNNN-S00
+  brand: Cooler Master
+  model: E500-KNNN-S00
+  mpn: E500-KNNN-S00
+  category: Cooler
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/gabinete-gamer-cooler-master-elite-500-mid-tower-com-1-fan-preto-e500-knnn-s00
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/21798/gabinete-cooler-master-elite-500-mid-tower-black-atx-sem-fonte-com-1-fan-e500-knnn-s00
+- canonical_id: kingston-kf556c36bwea-16
+  canonical_name: Memória DDR5 Kingston Fury Beast RGB 16GB 5600MHz | Terabyte
+  brand: Kingston
+  model: KF556C36BWEA-16
+  mpn: KF556C36BWEA-16
+  category: Memória RAM
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/24816/memoria-ddr5-kingston-fury-beast-rgb-16gb-5600mhz-white-kf556c36bwea-16
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/448301/memoria-ram-kingston-fury-beast-rgb-16gb-5600mhz-ddr5-cl36-branco-kf556c36bwea-16
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/memoria-kingston-fury-beast-rgb-16gb-1x16gb-ddr5-5600mhz-c36-branco-kf556c36bwea-16
+- canonical_id: gigabyte-gv-n406twf2oc-8gd
+  canonical_name: Placa de Video Gigabyte GeForce RTX 4060 Ti Windforce OC, 8GB, GDDR6,
+    128-bit, GV-N406TWF2OC-8GD
+  brand: Gigabyte
+  model: GV-N406TWF2OC-8GD
+  mpn: GV-N406TWF2OC-8GD
+  category: Placa de vídeo
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/placa-de-video-gigabyte-geforce-rtx-4060-ti-windforce-oc-8gb-gddr6-128-bit-gv-n406twf2oc-8gd
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/25718/placa-de-video-gigabyte-nvidia-geforce-rtx-4060-ti-windforce-oc-8gb-gddr6-dlss-ray-tracing-gv-n406twf2oc-8gd
+- canonical_id: cooler-master-soa010-me-00
+  canonical_name: Suporte Para SSD M.2 NVME Cooler Master Oracle AIR, Type-C, Gunmetal,
+    SOA010-ME-00
+  brand: Cooler Master
+  model: SOA010-ME-00
+  mpn: SOA010-ME-00
+  category: SSD
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/suporte-para-ssd-m-2-nvme-cooler-master-oracle-air-type-c-gunmetal-soa010-me-00
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/27335/suporte-para-ssd-m2-nvme-cooler-master-oracle-air-type-c-gunmetal-soa010-me-00
+- canonical_id: corsair-co-9050071-ww
+  canonical_name: Ventoinha Corsair LL120 RGB 120mm, CO-9050071-WW
+  brand: Corsair
+  model: CO-9050071-WW
+  mpn: CO-9050071-WW
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/ventoinha-corsair-ll120-rgb-120mm-co-9050071-ww
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/10175/cooler-para-gabinete-corsair-ll120-dual-light-loop-rgb-120mm-black-co-9050071-ww
+- canonical_id: logitech-910-006551
+  canonical_name: Mouse Logitech Pop, Compacto, Sem Fio/Bluetooth, Botão Emoji Customizável,
+    SilentTouch, 4000 DPI, Rosa, 910-006551
+  brand: Logitech
+  model: 910-006551
+  mpn: 910-006551
+  category: Mouse
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/28135/mouse-logitech-pop-compacto-sem-fiobluetooth-botao-emoji-customizavel-silenttouch-4000-dpi-rosa-910-006551
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/mouse-logitech-pop-mouse-4000dpi-4-botoes-rosa-heartbreaker-910-006551
+- canonical_id: creative-51mf8375aa001
+  canonical_name: Soundbar Creative Stage V2, USB/Bluetooth 5.0, Black, Com Controle
+    Remoto, 51MF8375AA001
+  brand: Creative
+  model: 51MF8375AA001
+  mpn: 51MF8375AA001
+  category: Hardware
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/22559/soundbar-creative-stage-v2-usbbluetooth-50-black-com-controle-remoto-51mf8375aa001
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/caixa-de-som-creative-stage-v2-160w-rms-bluetooth-cabo-optico-e-usb-preto-51mf8375aa001
+- canonical_id: force-one-fr-mo-ph-02
+  canonical_name: Mouse Gamer Force One Phantom Black, 26.000 DPI, Com 6 Botões, Switches
+    Huano Azul, Sensor Paw 3395, Preto - FR.MO.PH.02
+  brand: Force One
+  model: FR.MO.PH.02
+  mpn: FR.MO.PH.02
+  category: Mouse
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/670592/mouse-gamer-force-one-phantom-black-26-000-dpi-com-6-botoes-switches-huano-azul-sensor-paw-3395-preto-fr-mo-ph-02
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/mouse-gamer-force-one-phantom-26000dpi-5-botoes-preto-fr-mo-ph-02
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/30223/mouse-gamer-force-one-phantom-black-usb-sensor-paw-3395-26000-dpi-5-botoes-frmoph02
+- canonical_id: lexar-lns100-512rbna
+  canonical_name: SSD Lexar NS100, 512GB, Sata III 6GB/s, Leitura 550MB/s, Gravacao
+    520MB/s, LNS100-512RBNA
+  brand: Lexar
+  model: LNS100-512RBNA
+  mpn: LNS100-512RBNA
+  category: SSD
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/ssd-lexar-ns100-512gb-sata-iii-6gb-s-leitura-550mb-s-gravacao-520mb-s-lns100-512rbna
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/13646/ssd-lexar-ns100-512gb-sata-iii-leitura-550mbs-lns100-512rbna
+- canonical_id: western-digital-wds100t2b0b
+  canonical_name: SSD WD Blue, 1TB, M.2 2280, Sata III 6GB/s, Leitura 560 MB/s, Gravacao
+    530 MB/s, WDS100T2B0B
+  brand: Western Digital
+  model: WDS100T2B0B
+  mpn: WDS100T2B0B
+  category: SSD
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/ssd-wd-blue-1tb-m-2-2280-sata-iii-6gb-s-leitura-560-mb-s-gravacao-530-mb-s-wds100t2b0b
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/10781/ssd-wd-blue-m2-2280-1tb-wds100t2b0b-leituras-560mbs-e-gravacoes-530mbs
+- canonical_id: westerndigital-wd142purp
+  canonical_name: HD Western Digital Purple Pro Surveillance, 14TB, SATA III, WD142PURP
+  brand: WesternDigital
+  model: WD142PURP
+  mpn: WD142PURP
+  category: Hardware
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/29478/hd-western-digital-purple-pro-surveillance-14tb-sata-iii-wd142purp
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/hd-western-digital-wd-purple-pro-14tb-3-5-7200rpm-sata-iii-6gb-s-cache-512mb-wd142purp
+- canonical_id: fortrek-fk425s
+  canonical_name: Suporte de Mesa Fortrek, Articulado, Para Monitor Até 32&quot;,
+    FK425S
+  brand: Fortrek
+  model: FK425S
+  mpn: FK425S
+  category: Monitor
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/27809/suporte-de-mesa-fortrek-articulado-para-monitor-ate-32-fk425s
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/suporte-articulado-para-monitor-fortrek-fk-425s-17-pol-a-32-pol-preto-fk-425s
+- canonical_id: fifine-t732
+  canonical_name: Kit Microfone Fifine T732 USB com Braço Articulado | Terabyte
+  brand: Fifine
+  model: T732
+  mpn: T732
+  category: Hardware
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/22477/kit-de-microfone-condensador-fifine-t732-usb-black-com-braco-articulado
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/1018239/kit-de-microfone-condensador-fifine-t732-usb-com-braco-articulado-pop-filter-e-shock-mount-preto
+- canonical_id: intel-bx8071513700f
+  canonical_name: Processador Intel Core I7-13700F, 16-Core, 24-Threads, 2.1GHz (5.2GHz
+    Turbo), Cache 24MB, LGA1700, BX8071513700F
+  brand: Intel
+  model: BX8071513700F
+  mpn: BX8071513700F
+  category: Processador
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/processador-intel-core-i7-13700f-16-core-24-threads-2-1ghz-5-2ghz-turbo-cache-24mb-lga1700-bx8071513700f
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/23461/processador-intel-core-i7-13700f-21ghz-52ghz-turbo-13-geracao-16-cores-24-threads-lga-1700-bx8071513700f
+- canonical_id: gigabyte-b760m-gaming-ddr4
+  canonical_name: Placa Mãe Gigabyte B760M Gaming DDR4, Chipset B760, Intel LGA 1700,
+    MATX, DDR4
+  brand: Gigabyte
+  model: B760M GAMING DDR4
+  mpn: B760M GAMING DDR4
+  category: Placa-mãe
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/24658/placa-mae-gigabyte-b760m-gaming-ddr4-chipset-b760-intel-lga-1700-matx-ddr4
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/placa-mae-gigabyte-b760m-gaming-ddr4-lga-1700-m-atx-chipset-intel-b760-b760m-gaming-ddr4
+- canonical_id: pny-vcg409024tfxxpb1
+  canonical_name: Placa de Video PNY GeForce RTX 4090 XLR8 Gaming Verto Epic-X RGB,
+    24GB, GDDR6X, 384-bit, VCG409024TFXXPB1
+  brand: PNY
+  model: VCG409024TFXXPB1
+  mpn: VCG409024TFXXPB1
+  category: Placa de vídeo
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/placa-de-video-pny-geforce-rtx-4090-xlr8-gaming-verto-epic-x-rgb-24gb-gddr6x-384-bit-vcg409024tfxxpb1
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/24373/placa-de-video-pny-nvidia-geforce-rtx-4090-xlr8-gaming-verto-epic-x-rgb-24gb-gddr6x-dlss-ray-tracing-vcg409024tfxxpb1
+- canonical_id: corsair-cmt32gx4m2c3200c16
+  canonical_name: Memória DDR4 Corsair Dominator, RGB, 32GB (2x16GB), 3200MHz, CMT32GX4M2C3200C16
+  brand: Corsair
+  model: CMT32GX4M2C3200C16
+  mpn: CMT32GX4M2C3200C16
+  category: Memória RAM
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/10952/memoria-ddr4-corsair-dominator-rgb-cmt32gx4m2c3200c16-32gb-2x16gb-3200mhz
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/memoria-corsair-dominator-platinum-rgb-32gb-2x16gb-ddr4-3200mhz-c16-preto-cmt32gx4m2c3200c16
+- canonical_id: logitech-941-000157
+  canonical_name: Volante Logitech G923 TRUEFORCE Para XBOX/PC, 941-000157
+  brand: Logitech
+  model: 941-000157
+  mpn: 941-000157
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/volante-logitech-g923-trueforce-para-xbox-pc-941-000157
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/117285/volante-logitech-g923-para-xbox-series-x-s-xbox-one-e-pc-com-trueforce-pedais-responsivos-launch-control-941-000157
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/24151/volante-logitech-g923-xbox-series-x-s-xbox-one-e-pc-com-pedal-941-000157
+- canonical_id: duex-dx-h610zg-m2
+  canonical_name: Placa-Mãe Duex DX-H610ZG, LGA 1700, mATX, DDR4 | Terabyte
+  brand: DUEX
+  model: DX-H610ZG M2
+  mpn: DX-H610ZG M2
+  category: Hardware
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/23732/placa-mae-duex-dx-h610zg-chipset-h610-intel-lga-1700-matx-ddr4
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/placa-mae-duex-dx-h610zg-m2-ddr4-soquet-lga1700-m-atx-chipset-intel-h610-dx-h610zg-m2
+- canonical_id: nzxt-ca-h52fw-01
+  canonical_name: Gabinete Gamer NZXT H510 Flow, Mid-Tower, Lateral de Vidro, Com
+    2 Ventoinhas, Branco, CA-H52FW-01
+  brand: NZXT
+  model: CA-H52FW-01
+  mpn: CA-H52FW-01
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/gabinete-gamer-nzxt-h510-flow-mid-tower-lateral-de-vidro-com-2-ventoinhas-branco-ca-h52fw-01
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/19636/gabinete-gamer-nzxt-h510-flow-mid-tower-vidro-temperado-white-atx-sem-fonte-com-2-fans-ca-h52fw-01
+- canonical_id: tp-link-archer-c5v
+  canonical_name: Roteador Wireless TP-Link C5v Dual Band , Archer C5v
+  brand: TP-Link
+  model: Archer-C5v
+  mpn: Archer-C5v
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/roteador-wireless-tp-link-c5v-dual-band-archer-c5v
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/419472/roteador-tp-link-archer-ax53-wireless-dual-band-4-ant-fixas
+- canonical_id: xiaomi-ax1800
+  canonical_name: Roteador Wifi 6 Mi Router Ax1800 Xiaomi, Branco
+  brand: Xiaomi
+  model: AX1800
+  mpn: AX1800
+  category: Hardware
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/612175/roteador-wifi-6-mi-router-ax1800-xiaomi-branco
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/36008/roteador-tp-link-wireless-archer-ax23-wi-fi-6-ax1800-dual-band-gigabite-com-4-antenas
+- canonical_id: galax-58nzn6mdbboc
+  canonical_name: Placa de Video Galax GeForce RTX 5080 1-Click OC, 16GB, GDDR7, 256-bit,
+    58NZN6MDBBOC
+  brand: Galax
+  model: 58NZN6MDBBOC
+  mpn: 58NZN6MDBBOC
+  category: Placa de vídeo
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/placa-de-video-galax-geforce-rtx-5080-1-click-oc-16gb-gddr7-256-bit-58nzn6mdbboc
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/35085/placa-de-video-galax-nvidia-geforce-rtx-5080-1-click-oc-16gb-gddr7-argb-dlss-ray-tracing-58nzn6mdbboc
+- canonical_id: jbl-jblcharge6blk
+  canonical_name: Caixa de Som JBL Charge 6, 45W RMS, Bluetooth, Preto, JBLCHARGE6BLK
+  brand: JBL
+  model: JBLCHARGE6BLK
+  mpn: JBLCHARGE6BLK
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/caixa-de-som-jbl-charge-6-45w-rms-bluetooth-preto-jblcharge6blk
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/954971/caixa-de-som-bluetooth-jbl-charge-6-azul
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/36221/caixa-de-som-jbl-charge-6-bluetooth-45w-usb-c-preto-jblcharge6blk
+- canonical_id: thermalgrizzly-tg-mp8-30-30-10-1r
+  canonical_name: Thermal Pad Thermal Grizzly Minus Pad 8, 30 x 30 x 10mm, TG-MP8-30-30-10-1R
+  brand: ThermalGrizzly
+  model: TG-MP8-30-30-10-1R
+  mpn: TG-MP8-30-30-10-1R
+  category: Hardware
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/21090/thermal-pad-thermal-grizzly-minus-pad-8-30-x-30-x-10mm-tg-mp8-30-30-10-1r
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/almofada-termica-thermal-grizzly-minus-pad-8-30x30x1-0mm-tg-mp8-30-30-10-1r
+- canonical_id: kingston-kf560c36bbek2-64
+  canonical_name: Memória DDR5 Kingston Fury Beast 64GB 6000MHz | Terabyte
+  brand: Kingston
+  model: KF560C36BBEK2-64
+  mpn: KF560C36BBEK2-64
+  category: Memória RAM
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/24306/memoria-ddr5-kingston-fury-beast-expo-64gb-2x32gb-6000mhz-black-kf560c36bbek2-64
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/memoria-kingston-fury-64gb-2x32gb-ddr5-6000mhz-c36-preto-kf560c36bbek2-64
+- canonical_id: aerocool-en53367
+  canonical_name: Fonte AeroCool KCAS 500W Bronze 80 Plus, EN53367
+  brand: Aerocool
+  model: EN53367
+  mpn: EN53367
+  category: Fonte
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/fonte-aerocool-kcas-500w-en53367
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/57437/fonte-aerocool-kcas-500w-80-plus-bronze-pfc-ativo-sem-cabo-preto-en53367
+- canonical_id: cooler-master-mcs-s400-kn5n-s00
+  canonical_name: Gabinete Gamer Cooler Master Silencio S400, Com 2 Fans Preto, MCS-S400-KN5N-S00
+  brand: Cooler Master
+  model: MCS-S400-KN5N-S00
+  mpn: MCS-S400-KN5N-S00
+  category: Cooler
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/gabinete-gamer-cooler-master-silencio-s400-com-2-fans-preto-mcs-s400-kn5n-s00
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/24427/gabinete-gamer-cooler-master-silencio-s400-steel-mid-tower-black-sem-fonte-com-2-fans-mcs-s400-kn5n-s00
+- canonical_id: inno3d-n30602-12d6x-11902120h
+  canonical_name: Placa de Vídeo INNO3D NVIDIA GeForce RTX 3060 TWIN X2 OC, LHR, 12GB,
+    GDDR6, DLSS, Ray Tracing, N30602-12D6X-11902120H
+  brand: Inno3d
+  model: N30602-12D6X-11902120H
+  mpn: N30602-12D6X-11902120H
+  category: Placa de vídeo
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/18869/placa-de-video-inno3d-nvidia-geforce-rtx-3060-twin-x2-oc-12gb-gddr6x-192bit-lhr-n30602-12d6x-11902120h
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/placa-de-video-inno3d-geforce-rtx-3060-twin-x2-oc-12gb-gddr6-192-bit-n30602-12d6x-11902120h
+- canonical_id: xpg-ax4u36008g18i-st50
+  canonical_name: Memória DDR4 XPG Spectrix D50 8GB 3600MHz RGB | Terabyte
+  brand: XPG
+  model: AX4U36008G18I-ST50
+  mpn: AX4U36008G18I-ST50
+  category: Memória RAM
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/22277/memoria-ddr4-xpg-spectrix-d50-8gb-3600mhz-cl18-rgb-gray-ax4u36008g18i-st50
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/memoria-adata-xpg-spectrix-d50-rgb-8gb-1x8gb-ddr4-3600mhz-c18-cinza-ax4u36008g18i-st50
+- canonical_id: hyperx-hx-kb7rdx-br
+  canonical_name: Teclado Mecânico Gamer HyperX Alloy Origins Core RGB, Switch HyperX
+    Red, ABNT2, HX-KB7RDX-BR
+  brand: HyperX
+  model: HX-KB7RDX-BR
+  mpn: HX-KB7RDX-BR
+  category: Teclado
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/18703/teclado-mecanico-gamer-hyperx-alloy-origins-core-rgb-switch-hyperx-red-abnt2-hx-kb7rdx-br
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/teclado-mecanico-gamer-hyperx-alloy-origins-core-rgb-abnt2-switch-vermelho-preto-hx-kb7rdx-br
+- canonical_id: lian-li-lancool-ii-mesh-performance
+  canonical_name: Gabinete Gamer Lian Li Lancool II Mesh C Performance, Lateral de
+    Vidro, Preto, LANCOOL II MESH C PERFORMANCE-X
+  brand: Lian Li
+  model: LANCOOL-II-MESH-C-PERFORMANCE-X
+  mpn: LANCOOL-II-MESH-C-PERFORMANCE-X
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/gabinete-gamer-lian-li-lancool-ii-mesh-c-performance-lateral-de-vidro-preto-lancool-ii-mesh-c-performance-x
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/21056/gabinete-gamer-lian-li-lancool-ii-mesh-c-performance-mid-tower-vidro-temperado-black-sem-fonte-com-3-fans
+- canonical_id: cooler-master-mgx-zosg-n15m-r2
+  canonical_name: Pasta Térmica Mastergel Cooler Master, Regular, MGX-ZOSG-N15M-R2
+  brand: Cooler Master
+  model: MGX-ZOSG-N15M-R2
+  mpn: MGX-ZOSG-N15M-R2
+  category: Cooler
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/13511/pasta-termica-mastergel-cooler-master-regular
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/pasta-termica-cooler-master-mastergel-regular-mgx-zosg-n15m-r2
+- canonical_id: logitech-910-002225
+  canonical_name: Mini Mouse Logitech M185 USB Wireless Cinza, 910-002225
+  brand: Logitech
+  model: 910-002225
+  mpn: 910-002225
+  category: Mouse
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/mini-mouse-logitech-m185-usb-wireless-cinza-910-002225
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/13760/mouse-logitech-m185-sem-fio-1000-dpi-wireless-cinza-910-002225
+- canonical_id: adata-ad4u26668g19-sgn
+  canonical_name: Memoria Adata, 8GB (1x8GB), DDR4, 2666MHz, C19, AD4U26668G19-SGN
+  brand: ADATA
+  model: AD4U26668G19-SGN
+  mpn: AD4U26668G19-SGN
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/memoria-adata-8gb-1x8gb-ddr4-2666mhz-c19-ad4u26668g19-sgn
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/474937/memoria-ram-adata-xpg-8gb-2666mhz-ddr4-cl19-verde-ad4u26668g19-sgn
+- canonical_id: redragon-gm-703
+  canonical_name: Memoria Redragon Flame, 8GB (1x8GB), DDR4, 3200MHz, Preto, GM-703
+  brand: Redragon
+  model: GM-703
+  mpn: GM-703
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/memoria-redragon-flame-8gb-1x8gb-ddr4-3200mhz-preto-gm-703
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/29131/memoria-ddr4-redragon-flame-8gb-3200mhz-gm-703
+- canonical_id: jbl-jblgo2blk
+  canonical_name: Caixa de Som JBL GO 2 Bluetooth 3.1W Preta, JBLGO2BLK
+  brand: JBL
+  model: JBLGO2BLK
+  mpn: JBLGO2BLK
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/caixa-de-som-jbl-go-2-bluetooth-3-1w-preta-jblgo2blk
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/952321/caixa-de-som-bluetooth-jbl-go-4-preta
+- canonical_id: microsoft-qau-00082
+  canonical_name: Controle Microsoft Xbox Deep Pink, Wireless, Rosa, QAU-00082
+  brand: Microsoft
+  model: QAU-00082
+  mpn: QAU-00082
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/controle-microsoft-xbox-deep-pink-wireless-rosa-qau-00082
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/460677/controle-sem-fio-xbox-deep-pink-qau-00082-microsoft
+- canonical_id: msi-g5070-12s2c
+  canonical_name: Placa de Vídeo MSI RTX 5070 12G Shadow 2x OC Nvdia Geforce, 12GB,
+    GDDR7, OpenGL 4.6, G-SYNC - G5070-12S2C
+  brand: MSI
+  model: G5070-12S2C
+  mpn: G5070-12S2C
+  category: Placa de vídeo
+  listings:
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/782142
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/placa-de-video-msi-geforce-rtx-5070-shadow-2x-oc-12gb-gddr7-192-bit-g5070-12s2c
+- canonical_id: patriot-p300p1tbm28
+  canonical_name: SSD Patriot P300, 1TB, NVME, Leitura 2100MBs e Gravação 1650MBs,
+    P300P1TBM28
+  brand: Patriot
+  model: P300P1TBM28.
+  mpn: P300P1TBM28.
+  category: SSD
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/13955/ssd-patriot-p300-1tb-nvme-leitura-2100mbs-e-gravacao-1650mbs-p300p1tbm28
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/ssd-patriot-p300-1tb-m-2-2280-nvme-pcie-leitura-2100mb-s-gravacao-1650mb-s-p300p1tbm28
+- canonical_id: gigabyte-gv-n407seagle-oc-12gd
+  canonical_name: Placa de Video Gigabyte NVIDIA GeForce RTX 4070 Super Eagle OC,
+    12GB, GDDR6X, DLSS, Ray Tracing, GV-N407SEAGLE OC-12GD
+  brand: Gigabyte
+  model: GV-N407SEAGLE OC-12GD
+  mpn: GV-N407SEAGLE OC-12GD
+  category: Placa de vídeo
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/27310/placa-de-video-gigabyte-nvidia-geforce-rtx-4070-super-eagle-oc-12gb-gddr6x-dlss-ray-tracing-gv-n407seagle-oc-12gd
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/placa-de-video-gigabyte-geforce-rtx-4070-super-eagle-oc-12gb-gddr6x-192-bit-gv-n407seagle-oc-12gd
+- canonical_id: corsair-ca-9011202-na
+  canonical_name: Headset Gamer Corsair Void RGB Elite Wireless Branco 7.1 Drivers
+    50mm, CA-9011202-NA
+  brand: Corsair
+  model: CA-9011202-NA
+  mpn: CA-9011202-NA
+  category: Headset
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/headset-gamer-corsair-void-rgb-elite-wireless-branco-7-1-drivers-50mm-ca-9011202-na
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/109994/headset-gamer-corsair-void-elite-wireless-rgb-7-1-surround-drivers-50mm-branco-ca-9011202-na
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/16040/headset-gamer-corsair-71-void-rgb-elite-sem-fio-white-ca-9011202-na
+- canonical_id: dt3-14248
+  canonical_name: Cadeira Office DT3 Vita Super H, Preto e Azul, 14248-9
+  brand: DT3
+  model: 14248-9
+  mpn: 14248-9
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/cadeira-office-dt3-vita-super-h-preto-e-azul-14248-9
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/39543/cadeira-de-escritorio-dt3-vita-super-h-ajustavel-ergonomica-mesh-preto-e-azul-14248-9
+- canonical_id: corsair-ch-9000234-ww
+  canonical_name: Keycaps Corsair, PBT, Duble-shot, Branco, CH-9000234-WW
+  brand: Corsair
+  model: CH-9000234-WW
+  mpn: CH-9000234-WW
+  category: Hardware
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/28386/keycaps-corsair-pbt-duble-shot-branco-ch-9000234-ww
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/conjunto-completo-de-teclas-corsair-pbt-double-shot-branco-ch-9000234-ww
+- canonical_id: cooler-master-q500-kgnn-s00
+  canonical_name: Gabinete Gamer Cooler Master Qube 500 Flatpack, Mid-Tower, Vidro
+    Temperado, E-ATX, Preto, Sem Fonte, Com 1 Fan, Q500-KGNN-S00
+  brand: Cooler Master
+  model: Q500-KGNN-S00
+  mpn: Q500-KGNN-S00
+  category: Cooler
+  listings:
+  - competitor: terabyte
+    active: true
+    url: https://www.terabyteshop.com.br/produto/27910/gabinete-gamer-cooler-master-qube-500-flatpack-mid-tower-vidro-temperado-e-atx-preto-sem-fonte-com-1-fan-q500-kgnn-s00
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/gabinete-gamer-cooler-master-qube-500-flatpack-modular-mid-tower-lateral-de-vidro-com-1-fan-preto-q500-kgnn-s00
+- canonical_id: multi-sp349
+  canonical_name: Caixa de Som Multi Flash 15W RMS RGB, SP349
+  brand: Multi
+  model: SP349
+  mpn: SP349
+  category: Hardware
+  listings:
+  - competitor: pichau
+    active: true
+    url: https://www.pichau.com.br/caixa-de-som-multilaser-flash-15w-rms-rgb-sp349
+  - competitor: kabum
+    active: true
+    url: https://www.kabum.com.br/produto/153204/caixa-de-som-multilaser-speaker-flash-bluetooth-15w-sp349

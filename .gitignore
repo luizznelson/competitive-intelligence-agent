@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.DS_Store
+.vscode/
+.idea/
+
+# Runtime data
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+
+# Portable read-only portfolio snapshot (intentionally versioned)
+!data/demo/
+!data/demo/competitive_intelligence_demo.db
+!data/demo/snapshot_metadata.json
+reports/*.md
+
+# Playwright
+playwright-report/
+test-results/

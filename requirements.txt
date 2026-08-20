@@ -1,0 +1,15 @@
+pandas>=2.2,<3
+numpy>=2.0,<3
+SQLAlchemy>=2.0,<3
+psycopg[binary]>=3.2,<4
+requests>=2.32,<3
+beautifulsoup4>=4.12,<5
+protego>=0.6.2,<1
+PyYAML>=6,<7
+python-dotenv>=1.0,<2
+streamlit>=1.49,<2
+plotly>=6,<7
+playwright>=1.55,<2
+mcp[cli]>=2.0.0,<3
+groq>=0.30,<2
+pytest>=8,<9

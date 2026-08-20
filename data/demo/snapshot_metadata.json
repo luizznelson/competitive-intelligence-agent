@@ -1,0 +1,14 @@
+{
+  "generated_at_utc": "2026-08-20T00:16:55.620751+00:00",
+  "last_observation_at": "2026-08-19T23:47:08.371810",
+  "last_collection_finished_at": "2026-08-19T23:47:08.378663",
+  "tables": {
+    "competitors": 4,
+    "products": 100,
+    "listings": 227,
+    "collection_runs": 4,
+    "price_observations": 348
+  },
+  "snapshot_file": "competitive_intelligence_demo.db",
+  "note": "Snapshot real exportado do banco operacional para demonstração somente leitura."
+}

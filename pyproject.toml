@@ -1,0 +1,10 @@
+[project]
+name = "competitive-intelligence-agent"
+version = "0.1.0"
+description = "Automated competitive intelligence for Brazilian electronics retail"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"

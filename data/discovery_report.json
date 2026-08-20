@@ -1,0 +1,30 @@
+{
+  "target": 100,
+  "initial_products": 36,
+  "products_added": 64,
+  "final_products": 100,
+  "candidates_checked": 462,
+  "rejected_duplicates": 15,
+  "rejected_identity": 9,
+  "rejected_single_source": 374,
+  "validated_source_hits": {
+    "kabum": 162,
+    "pichau": 167,
+    "terabyte": 178
+  },
+  "source_catalogs": {
+    "kabum": {
+      "urls": 80000,
+      "strategy": "fresh-cache"
+    },
+    "pichau": {
+      "urls": 27415,
+      "strategy": "fresh-cache"
+    },
+    "terabyte": {
+      "urls": 22940,
+      "strategy": "fresh-cache"
+    }
+  },
+  "target_reached": true
+}
