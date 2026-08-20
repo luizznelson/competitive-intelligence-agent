@@ -3,40 +3,69 @@ from pathlib import Path
 import yaml
 
 
-def test_catalog_has_twenty_products_and_three_primary_sources():
-    path = Path(__file__).resolve().parents[1] / "config" / "products.yml"
-    data = yaml.safe_load(path.read_text(encoding="utf-8"))
-
-    products = data["products"]
-    active = []
-    inactive = []
-    for product in products:
-        for listing in product["listings"]:
-            row = (product["canonical_id"], listing["competitor"], listing.get("active", True))
-            (active if row[2] else inactive).append(row)
-
-    assert len(products) == 20
-    assert len(active) == 57
-    assert {competitor for _, competitor, _ in active} == {"kabum", "pichau", "terabyte"}
-    assert any(competitor == "magalu" for _, competitor, _ in inactive)
+CATALOG_PATH = Path(__file__).resolve().parents[1] / "config" / "products.yml"
+PRIMARY_SOURCES = {"kabum", "pichau", "terabyte"}
 
 
-def test_catalog_has_unique_canonical_ids_and_urls():
-    path = Path(__file__).resolve().parents[1] / "config" / "products.yml"
-    products = yaml.safe_load(path.read_text(encoding="utf-8"))["products"]
+def _load_products():
+    data = yaml.safe_load(CATALOG_PATH.read_text(encoding="utf-8"))
+    return data["products"]
 
-    canonical_ids = [p["canonical_id"] for p in products]
-    urls = [listing["url"] for p in products for listing in p["listings"]]
 
+def test_catalog_has_expected_scale_and_primary_sources():
+    products = _load_products()
+
+    # O projeto foi expandido para pelo menos 100 produtos.
+    # Não usar == 100 para permitir crescimento futuro do catálogo.
+    assert len(products) >= 100
+
+    active_sources = {
+        listing["competitor"]
+        for product in products
+        for listing in product["listings"]
+        if listing.get("active", True)
+    }
+
+    # As fontes competitivas ativas principais devem continuar sendo estas.
+    assert PRIMARY_SOURCES.issubset(active_sources)
+
+    # Magazine Luiza pode permanecer modelado historicamente,
+    # mas não deve aparecer como fonte ativa principal.
+    assert "magalu" not in active_sources
+
+
+def test_catalog_has_unique_product_ids_and_listing_urls():
+    products = _load_products()
+
+    canonical_ids = [product["canonical_id"] for product in products]
     assert len(canonical_ids) == len(set(canonical_ids))
+
+    urls = [
+        listing["url"]
+        for product in products
+        for listing in product["listings"]
+    ]
     assert len(urls) == len(set(urls))
 
 
-def test_every_product_has_at_least_two_active_sources_and_mpn():
-    path = Path(__file__).resolve().parents[1] / "config" / "products.yml"
-    products = yaml.safe_load(path.read_text(encoding="utf-8"))["products"]
+def test_every_product_has_at_least_two_active_sources_and_identity():
+    products = _load_products()
 
     for product in products:
-        active_sources = {x["competitor"] for x in product["listings"] if x.get("active", True)}
+        active_sources = {
+            listing["competitor"]
+            for listing in product["listings"]
+            if listing.get("active", True)
+        }
+
         assert len(active_sources) >= 2, product["canonical_id"]
-        assert product.get("mpn"), product["canonical_id"]
+
+        assert product.get("canonical_id"), product
+        assert product.get("canonical_name"), product["canonical_id"]
+        assert product.get("brand"), product["canonical_id"]
+
+        # Discovery pode identificar o SKU por MPN quando disponível
+        # ou por modelo normalizado quando o varejista não publica MPN.
+        assert (
+            product.get("mpn") or product.get("model")
+        ), f"Produto sem identidade suficiente: {product['canonical_id']}"
