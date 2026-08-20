@@ -2,6 +2,8 @@
 
 Transformando preços e disponibilidade publicados por concorrentes em sinais estruturados de mercado para apoiar análise comercial.
 
+[**Acessar Dashboard Interativo**](https://competitive-intelligence-agent.streamlit.app/)
+
 ---
 
 ## Problema
