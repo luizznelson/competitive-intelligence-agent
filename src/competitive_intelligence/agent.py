@@ -235,5 +235,24 @@ async def ask_agent(
         )
 
 
+def _unwrap_exception_group(exc: BaseException) -> BaseException:
+    """Return the underlying error, stripping any anyio TaskGroup wrapping.
+
+    Every step of ask_agent() runs inside `async with Client(stdio_client(...))`,
+    which anyio backs with a TaskGroup. Any exception raised in that block -
+    AgentRateLimitError, AgentBudgetError, a plain RuntimeError, anything -
+    surfaces from asyncio.run() wrapped in a BaseExceptionGroup, even though
+    there is only ever one real error. Without unwrapping it here, callers'
+    `except AgentRateLimitError` (etc.) never match, because the propagated
+    exception's actual type is ExceptionGroup, not AgentRateLimitError.
+    """
+    while isinstance(exc, BaseExceptionGroup) and exc.exceptions:
+        exc = exc.exceptions[0]
+    return exc
+
+
 def ask_agent_sync(question: str) -> str:
-    return asyncio.run(ask_agent(question))
+    try:
+        return asyncio.run(ask_agent(question))
+    except* Exception as eg:
+        raise _unwrap_exception_group(eg) from eg
