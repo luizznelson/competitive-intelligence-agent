@@ -88,7 +88,7 @@ Prioridade:
 
 A extração persiste também o método utilizado, permitindo auditar como cada observação foi obtida.
 
-### PostgreSQL
+### PostgreSQL / SQLite
 
 Separa:
 
@@ -99,6 +99,8 @@ Separa:
 - execução da coleta.
 
 `source` e `seller` são armazenados separadamente.
+
+O pipeline completo roda sobre PostgreSQL. O deploy público (Streamlit Cloud ou qualquer ambiente sem `DATABASE_URL` configurada) sobe automaticamente sobre um snapshot SQLite real, exportado do banco operacional (`cli export-demo`) e versionado em `data/demo/`. Esse modo é somente leitura: `seed_catalog()` não roda e não existe nenhum caminho de coleta no dashboard. Ver `DEMO_MODE` em `config.py`.
 
 ### Analytics
 
@@ -121,6 +123,8 @@ Calcula:
 Expõe a camada analítica como tools independentes do agente.
 
 O agente não acessa tabelas arbitrariamente; ele consome capacidades definidas pelo sistema.
+
+O servidor MCP (`src/competitive_intelligence/mcp_server.py`) roda via stdio. Existe também um `mcp_server.py` na raiz do repositório — um entrypoint fino (`from src.competitive_intelligence.mcp_server import mcp`) usado apenas para conectar hosts MCP externos (ex.: MCP Inspector, clientes desktop) sem precisar apontar para dentro de `src/`.
 
 ### AI Market Analyst
 
@@ -199,3 +203,7 @@ falha técnica do collector
 ## 7. Listings antigos são desativados, não apagados
 
 Uma alteração no catálogo não destrói evidências históricas.
+
+## 8. Indisponibilidade é um resultado, não ausência de dado
+
+`success=true` com `available=false` significa que a página foi coletada com sucesso e a oferta foi identificada como indisponível — não é uma falha de coleta. Essa observação continua no histórico e nas tabelas de observações, mas não entra no cálculo de menor, mediana ou maior preço, porque não representa uma oferta comprável no momento. `success=false` (erro de transporte/extração), `available=false` (oferta esgotada) e `available=true` (oferta válida) são três estados diferentes e nunca são tratados como equivalentes pelo analytics.

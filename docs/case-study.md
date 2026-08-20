@@ -109,6 +109,10 @@ Um dashboard pode induzir conclusões erradas se tratar uma única coleta como t
 
 O projeto introduziu uma métrica de maturidade do histórico e comunica explicitamente quando os dados só permitem uma fotografia atual.
 
+## Disponibilidade não é ausência de dado
+
+Uma decisão de modelagem que só ficou clara durante o desenvolvimento: `success=true` com `available=false` é um resultado válido — a página foi coletada e a oferta foi identificada como esgotada — não uma falha do pipeline. Essa distinção é o que permite ao analytics excluir corretamente ofertas indisponíveis do cálculo de menor/mediana/maior preço atual, sem descartar a observação do histórico, onde ela continua servindo como sinal competitivo (ex.: uma fonte que fica esgotada com frequência é, em si, informação de mercado). Sem separar `sem coleta`, `erro de coleta`, `produto sem estoque` e `oferta disponível` como quatro estados distintos, o dashboard teria misturado ruído operacional com sinal de mercado.
+
 ---
 
 # Como apresentar este case em entrevista
@@ -136,44 +140,27 @@ Uma versão curta:
 
 ---
 
-# Prints recomendados para o portfólio
+# Screenshots do portfólio
 
-## 1. Visão executiva
+Os três primeiros prints (README) formam uma narrativa única — problema/resposta → evidência → investigação — e por isso usam, quando possível, o mesmo produto real do snapshot atual.
 
-Mostrar:
+## 1. Visão executiva — `docs/images/01-executive-overview.png`
 
-- pergunta de negócio;
-- maior divergência;
-- liderança por preço;
-- disponibilidade;
-- gráfico de dispersão.
+Pergunta de negócio, maior dispersão do momento, liderança por preço e disponibilidade por fonte. Responde **o que o sistema descobriu**.
 
-Esse print responde **o que o sistema descobriu**.
+## 2. Mercado & preços — `docs/images/02-market-evidence.png`
 
-## 2. Mercado & preços
+Um SKU real com pelo menos duas ofertas disponíveis e dispersão visualmente clara: menor/mediana/maior preço, tabela por fonte, gráfico de preços. Mostra **a evidência**.
 
-Selecionar um SKU com três fontes válidas e boa dispersão.
+## 3. Analista de IA — `docs/images/03-ai-analyst.png`
 
-Mostrar:
+Uma pergunta real que investiga o mesmo sinal mostrado nos dois prints anteriores, respondida com base nas tools MCP. Mostra **a investigação**.
 
-- menor/mediana/maior;
-- tabela de fontes;
-- gráfico de preços;
-- histórico quando já houver observações suficientes.
+## 4. Operação & qualidade
 
-Esse print mostra **a evidência**.
+![Operação e qualidade](images/04-operation-quality.png)
 
-## 3. Operação & qualidade
-
-Mostrar:
-
-- taxa de sucesso;
-- cobertura por fonte;
-- métodos de coleta;
-- maturidade do histórico;
-- rastreabilidade.
-
-Esse print mostra **que a análise não depende de dados tratados como caixa-preta**.
+Taxa de sucesso, cobertura por fonte, métodos de coleta, maturidade do histórico, rastreabilidade. Fica apenas aqui (não no README) para manter o README enxuto. Mostra **que a análise não depende de dados tratados como caixa-preta**.
 
 ---
 

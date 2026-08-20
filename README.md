@@ -1,561 +1,255 @@
 # Competitive Intelligence Agent
 
-### Monitoramento automatizado de concorrentes para transformar preços públicos em sinais de mercado
-
-Sistema de inteligência competitiva para eletrônicos que coleta **preço e disponibilidade em fontes públicas**, mantém histórico real, calcula indicadores determinísticos e disponibiliza os dados em um dashboard executivo e para um **agente de IA conectado por MCP**.
-
-> **Pergunta de negócio:** como substituir o monitoramento manual de concorrentes por uma rotina contínua, rastreável e orientada por dados — sem depender de análise manual a cada ciclo?
-
-`Python` · `Playwright` · `PostgreSQL` · `SQL` · `Pandas` · `Streamlit` · `Plotly` · `MCP` · `LangChain/LangGraph-ready` · `Groq` · `Docker` · `Pytest`
+Transformando preços e disponibilidade publicados por concorrentes em sinais estruturados de mercado para apoiar análise comercial.
 
 ---
 
-## O problema
+## Problema
 
-Monitorar concorrentes manualmente parece simples quando existem poucos produtos. O problema aparece quando a operação precisa repetir, todos os dias:
+Monitorar concorrentes manualmente funciona em baixa escala. O problema aparece quando a operação precisa se repetir, todos os dias, para dezenas de produtos em várias lojas:
 
-1. abrir diferentes lojas;
-2. localizar o mesmo SKU em cada fonte;
-3. registrar preço e disponibilidade;
-4. identificar mudanças relevantes;
-5. separar um movimento de mercado de um problema de coleta;
-6. transformar tudo em informação útil para decisão.
+1. abrir cada loja e localizar o mesmo SKU;
+2. registrar preço e disponibilidade;
+3. identificar o que mudou desde a última checagem;
+4. separar um movimento real de mercado de um problema de coleta;
+5. transformar tudo isso em informação útil para decisão.
 
-O custo não está apenas no tempo de consulta. Sem histórico estruturado, cada análise recomeça praticamente do zero.
+Sem histórico estruturado, cada análise recomeça do zero — e sem separar coleta de interpretação, uma falha de scraper pode ser lida como se fosse um movimento de mercado.
 
-O projeto foi construído para responder:
+## Pergunta de negócio
 
-> **Quais produtos e fontes apresentam sinais competitivos que justificam investigação ou ação comercial?**
+Há duas perguntas diferentes por trás deste projeto:
 
----
+**Pergunta de engenharia** — por que o sistema existe:
 
-## A solução
+> Como substituir uma rotina manual de monitoramento de concorrentes por uma coleta estruturada, rastreável e reproduzível?
+
+**Pergunta analítica** — o que os dados coletados permitem responder:
+
+> Quais produtos e fontes apresentam sinais competitivos que justificam investigação ou ação comercial?
+
+## Solução
+
+Um pipeline que coleta preço e disponibilidade em páginas públicas previamente cadastradas, mantém histórico real em banco relacional, calcula indicadores determinísticos (sem LLM) e expõe tudo em um dashboard executivo e em ferramentas MCP para um agente de IA investigar sob demanda.
 
 ```text
-Catálogo de SKUs
+Catálogo (MPN/SKU) → Coleta (HTTP + fallback Playwright) → Histórico → Analytics → Dashboard + MCP → IA
+```
+
+A coleta, o banco, o histórico, os indicadores e o dashboard funcionam sem nenhuma chave de LLM. A IA é uma camada de investigação por cima de dados que já existem.
+
+## Dados reais monitorados
+
+O catálogo atual (`config/products.yml`) tem **100 produtos canônicos** e **227 URLs de listing configuradas**, das quais **225 estão ativas** em **três fontes principais**: KaBuM!, Pichau e TerabyteShop. Magazine Luiza segue modelado no schema como canal complementar, mas suas 2 URLs estão hoje inativas — sem observações no snapshot atual. Essa separação entre `source` (canal) e `seller` (vendedor) evita contar o mesmo vendedor como dois concorrentes quando ele aparece também em marketplace.
+
+O matching entre lojas prioriza **MPN/SKU**, não título, para não comparar variantes visualmente parecidas como se fossem o mesmo produto. O histórico não é retroativo: começa na primeira coleta real executada.
+
+## Do dado público à inteligência
+
+```text
+Catálogos públicos
       ↓
-Política robots.txt
+Product Discovery (sitemap-first, robots.txt)
       ↓
-HTTP + retry/backoff
-      ↓ (fallback quando necessário)
-Playwright
+Matching canônico por MPN/modelo
       ↓
-Extração + normalização
+Coleta HTTP, com fallback para browser (Playwright)
       ↓
-PostgreSQL + histórico
+Validação de preço e disponibilidade
+      ↓
+Persistência histórica (PostgreSQL / SQLite)
       ↓
 Analytics determinístico
       ↓
-Dashboard + relatório
+Dashboard + tools MCP
       ↓
-MCP tools
-      ↓
-AI Market Analyst
+Interpretação assistida por IA
 ```
 
-A IA não é o sistema inteiro. A coleta, o banco, o histórico, os indicadores e o dashboard funcionam sem LLM.
+- **Product Discovery** lê os sitemaps públicos das lojas para encontrar candidatos reais, sem depender de rotas de busca bloqueadas por `robots.txt`.
+- **Matching canônico** confirma que o mesmo produto foi encontrado em fontes diferentes antes de compará-lo.
+- **Coleta HTTP** é a estratégia padrão; **Playwright** só entra quando o HTML via HTTP não é suficiente.
+- **Validação** separa preço da oferta principal de parcelas, placeholders e produtos esgotados.
+- **Persistência** guarda cada observação (sucesso, falha, preço, disponibilidade, método) — nunca sobrescreve.
+- **Analytics** calcula menor/mediana/maior preço, dispersão, liderança e cobertura sem envolver LLM.
+- **Dashboard/MCP** expõem os mesmos números calculados, para leitura humana e para o agente de IA.
+- **IA** interpreta e investiga a partir desses números; não os recalcula.
 
----
+## Resultados do snapshot atual
 
-## Como a análise conta uma história
+> Snapshot real (`data/demo/`), última observação em **19/08/2026, 23:47**. Os números abaixo vêm diretamente das funções de `analytics.py` executadas sobre esse snapshot — não são estimativas nem dados simulados.
 
-A visão executiva foi desenhada para responder perguntas em sequência, e não apenas mostrar gráficos:
+**100 produtos canônicos monitorados, 225 ofertas ativas em três fontes (KaBuM!, Pichau, TerabyteShop).**
+Magazine Luiza segue modelado, mas sem listings ativos hoje.
 
-### 1. Prioridade
+**A última execução de coleta (19/08/2026) processou as 225 ofertas ativas, com 225 sucessos e 0 falhas registradas.**
+Sucesso de coleta não é sinônimo de oferta disponível: das 225 páginas coletadas com sucesso nessa fotografia, **80 estavam disponíveis e 145 indisponíveis** (0 com status desconhecido). Indisponibilidade é tratada como sinal de mercado, não como falha — ela permanece no histórico, mas não entra no cálculo de menor/mediana/maior preço.
 
-**Onde existe maior divergência de preço?**
+**Kingston Fury Beast 16GB DDR4 3200 (KF432C16BB1/16) tem a maior dispersão atual entre ofertas disponíveis: 51,1%** (KaBuM! R$ 899,99 até TerabyteShop R$ 1.359,90, mediana R$ 1.129,95).
+*Leitura:* diferença relevante de posicionamento entre as duas fontes que vendem esse SKU agora. *Limite:* é uma fotografia pontual — o indicador não demonstra tendência, apenas o estado observado em 19/08/2026.
 
-Os SKUs são ordenados pela dispersão percentual entre a menor e a maior oferta válida. O uso de percentual permite comparar categorias com faixas de preço diferentes.
+**Entre os 25 produtos com 2+ ofertas disponíveis comparáveis, KaBuM! lidera o menor preço em 14 (56%), com o menor gap médio ao mínimo do mercado (1,6%); TerabyteShop lidera em 10 (40%) mas tem a menor taxa de disponibilidade observada (18,2%); Pichau lidera em 1, com o maior gap médio (18,3%).**
+*Limite:* liderança é medida apenas nos produtos comparáveis hoje, não em todo o catálogo, e disponibilidade publicada não garante estoque físico real.
 
-### 2. Fontes
+*Maturidade do histórico:* 57 dos 225 listings ativos (25%) já acumulam 2+ observações válidas — o mínimo para começar a medir variação. Nenhuma mudança ≥ 3% foi registrada ainda nesse conjunto; o histórico começou em 18/08/2026, ao longo de 4 execuções de coleta.
 
-**Quem aparece com menor preço e onde existem sinais de ruptura?**
+## Principais decisões de engenharia
 
-O sistema acompanha:
+- **HTTP antes de Playwright** → mais leve e previsível → Playwright só roda quando a extração HTTP falha, reduzindo custo e fragilidade.
+- **Retry seletivo + backoff exponencial + jitter** → erros transitórios não viram falso "site indisponível" → menos falsos negativos na coleta.
+- **Produto canônico com prioridade a MPN/SKU** → títulos variam entre lojas → evita comparar variantes diferentes como se fossem o mesmo item.
+- **`source` separado de `seller`** → um marketplace pode revender um concorrente já monitorado → evita contar o mesmo vendedor duas vezes.
+- **Indisponibilidade ≠ falha de coleta** → `success=true` com `available=false` é um dado válido → o item some do menor/mediana/maior preço mas continua como evidência no histórico.
+- **Analytics 100% determinístico** → menor, mediana, maior preço, spread, liderança e cobertura são SQL/Pandas, não LLM → o agente de IA nunca inventa um número.
+- **Sem backfill fictício** → histórico começa na primeira coleta real → o dashboard não sugere tendência que os dados ainda não sustentam.
+- **`robots.txt` interpretado com Protego** → falha de transporte já foi confundida com bloqueio explícito em versão anterior → hoje o sistema distingue `Disallow`, indisponibilidade e erro transitório antes de decidir coletar.
+- **Listings removidos do YAML viram `active=false`, nunca são apagados** → preserva rastreabilidade histórica mesmo quando o catálogo muda.
+- **Deploy público roda sobre um snapshot real, não sobre coleta ao vivo** → evita depender de Playwright/Postgres/processos longos num ambiente público gratuito → ver [Modo público x pipeline completo](#modo-público-x-pipeline-completo).
 
-- quantidade de SKUs em que cada fonte possui a menor oferta;
-- disponibilidade por fonte;
-- cobertura da coleta;
-- gap médio para o menor preço observado do SKU.
+## Product Discovery
 
-### 3. Movimento
+A descoberta de catálogo é **sitemap-first**: o sistema lê os `Sitemap:` publicados no `robots.txt` de cada loja, percorre os índices de URLs, extrai identidade (JSON-LD/MPN/modelo) das páginas candidatas e só aceita um produto no catálogo quando o mesmo MPN/modelo é validado em pelo menos 2 fontes independentes.
 
-**O que mudou desde a coleta anterior?**
+A Pichau é um caso relevante: a política publicada no `robots.txt` bloqueia rotas de busca com parâmetro de query para crawlers, então o discovery não tenta contornar essa regra — a loja é descoberta via sitemap e páginas públicas query-free, com uma rota de busca legada mantida apenas como fallback documentado, não como estratégia principal.
 
-A variação é calculada somente quando a mesma oferta possui pelo menos duas observações válidas.
+A execução real que levou o catálogo de 36 para os 100 produtos atuais avaliou **462 candidatos**: 64 foram aceitos, 15 rejeitados por duplicidade, 9 por identidade inconsistente e 374 por não atingirem o mínimo de 2 fontes validadas.
 
-> Uma coleta produz uma **fotografia**. Tendência exige histórico.
-
-### 4. Evidência
-
-A análise executiva sempre permite chegar ao dado de origem: produto, fonte, seller, preço, disponibilidade, URL, horário, método de extração e eventual falha.
-
----
-
-## Dados reais
-
-A versão atual monitora um catálogo de **20 produtos canônicos** e **57 URLs ativas** em três fontes principais:
-
-- **KaBuM!**
-- **Pichau**
-- **TerabyteShop**
-
-O matching prioriza **MPN/SKU**, evitando comparar produtos parecidos que são, na prática, variantes diferentes.
-
-O Magazine Luiza permanece modelado como canal complementar, mas não é usado como concorrente principal nos casos em que a oferta é vendida pela própria KaBuM!.
-
-> O projeto não gera preços históricos artificiais. O histórico começa na primeira execução real do collector.
-
----
-
-# Decisões de engenharia
-
-## HTTP antes de browser automation
-
-`requests` é a primeira estratégia porque é mais leve, previsível e barata.
-
-O Playwright entra como fallback quando:
-
-- o HTML entregue por HTTP não contém informação suficiente;
-- a página depende de renderização no navegador;
-- a extração estruturada falha após as tentativas HTTP.
-
-Antes do fallback, erros transitórios passam por **retry seletivo + exponential backoff + jitter**.
-
----
-
-## Produto canônico antes de comparar preço
-
-Um mesmo produto pode aparecer como:
-
-```text
-SSD Kingston NV3 1TB M.2 NVMe
-Kingston NV3 1 TB PCIe 4.0
-SSD NV3 SNV3S/1000G Kingston
+```bash
+python -m src.competitive_intelligence.cli discover --target 100
+python -m src.competitive_intelligence.cli sources --refresh   # diagnóstico das fontes/sitemaps
 ```
 
-Comparar apenas o título é frágil.
+Detalhes de arquitetura do discovery: [`docs/catalog-discovery.md`](docs/catalog-discovery.md).
 
-Por isso, o catálogo mantém uma identidade canônica e utiliza MPN/SKU como principal referência.
+## Dashboard
 
----
-
-## Fonte não é a mesma coisa que seller
-
-Em marketplaces:
-
-```text
-source/channel = Magazine Luiza
-seller         = KaBuM!
-```
-
-Sem essa separação, o sistema poderia interpretar o mesmo vendedor como dois concorrentes independentes.
-
-`source` e `seller` são persistidos separadamente.
-
----
-
-## Indicadores não são calculados pelo LLM
-
-São determinísticos:
-
-- menor preço;
-- mediana;
-- maior preço;
-- spread percentual;
-- disponibilidade;
-- variação entre observações;
-- liderança de menor preço;
-- cobertura da coleta;
-- saúde do pipeline.
-
-A IA recebe esses resultados através de tools e atua na **investigação e síntese**, não na criação dos números.
-
----
-
-## Sem backfill fictício
-
-O sistema diferencia explicitamente:
-
-```text
-1 observação  → fotografia atual
-2+ observações → possibilidade de medir movimento
-histórico maior → análise de tendência
-```
-
-Isso impede o dashboard de sugerir tendências que os dados ainda não sustentam.
-
----
-
-# Desafios reais encontrados
-
-## 1. `robots.txt`
-
-A primeira implementação confundia falha ao obter o arquivo `robots.txt` com um `Disallow` explícito.
-
-Consequência: páginas permitidas eram classificadas incorretamente como bloqueadas.
-
-A solução foi redesenhada para:
-
-- buscar o arquivo usando a mesma sessão HTTP do collector;
-- interpretar as regras com **Protego**;
-- distinguir `Disallow` real de indisponibilidade/falha de transporte;
-- persistir o motivo correto quando uma coleta não ocorre.
-
-Esse problema foi identificado durante a execução com fontes reais, não criado artificialmente para demonstração.
-
-## 2. HTML variável entre fontes
-
-Cada varejista expõe preço e disponibilidade de forma diferente.
-
-A estratégia de extração prioriza:
-
-1. JSON-LD / Schema.org;
-2. metadados estruturados;
-3. heurísticas de HTML/texto;
-4. Playwright como fallback.
-
-## 3. Preço visível não significa oferta válida
-
-O collector precisa evitar valores como:
-
-- parcelas;
-- placeholders;
-- produtos esgotados tratados como preço corrente;
-- valores não associados à oferta principal.
-
-Uma oferta indisponível continua sendo persistida como **sinal de mercado**, mas não entra no cálculo de menor/mediana/maior preço atual.
-
-## 4. Coleta e inteligência são problemas diferentes
-
-Uma falha do scraper não deve ser interpretada como mudança do mercado.
-
-Por isso, o projeto possui uma área específica de **Operação & Qualidade**, separando saúde do pipeline dos sinais competitivos.
-
----
-
-# Dashboard
-
-O Streamlit possui cinco perspectivas.
+Cinco abas, pensadas em sequência: **prioridade → evidência → interpretação → confiabilidade**.
 
 ### Visão executiva
-
-Responde primeiro **o que merece atenção**, e só depois mostra as evidências.
-
-- maior divergência de preço;
-- liderança por menor preço;
-- disponibilidade;
-- dispersão percentual;
-- movimentos recentes;
-- maturidade do histórico.
+![Visão executiva](docs/images/01-executive-overview.png)
+Responde primeiro o que merece atenção — maior dispersão, liderança de preço, disponibilidade — antes de mostrar qualquer evidência bruta.
 
 ### Mercado & preços
-
-Exploração detalhada de um SKU:
-
-- menor preço;
-- mediana;
-- maior preço;
-- ofertas por fonte;
-- seller;
-- disponibilidade;
-- histórico acumulado.
+![Mercado e preços](docs/images/02-market-evidence.png)
+Evidência de um produto real: menor, mediana e maior preço por fonte, disponibilidade e histórico acumulado.
 
 ### Analista de IA
+![Analista de IA](docs/images/03-ai-analyst.png)
+Interface em linguagem natural que consulta as mesmas tools MCP usadas pelas outras abas — nunca recalcula os números por conta própria.
 
-Interface em linguagem natural que consulta tools MCP.
+A aba de **Operação & Qualidade** (taxa de sucesso, cobertura por fonte, maturidade do histórico) e a aba **Método & Decisões** também existem no dashboard; o screenshot de qualidade está em [`docs/case-study.md`](docs/case-study.md) para manter este README enxuto.
 
-Exemplos:
+## Analista de IA e MCP
 
-```text
-Quais produtos merecem atenção agora?
-Qual fonte lidera mais SKUs em preço?
-Compare as ofertas do Kingston NV3 1TB.
-O histórico já é suficiente para falar em tendência?
-Como está a saúde da coleta?
-```
+O servidor MCP (`src/competitive_intelligence/mcp_server.py`) expõe 7 ferramentas reais, todas sobre a mesma camada de analytics determinístico:
 
-### Operação & qualidade
+| Tool | O que retorna |
+|---|---|
+| `compare_market()` | snapshot de mercado (menor/mediana/maior preço) para todos os produtos |
+| `compare_product(canonical_id)` | comparação entre fontes para um produto específico |
+| `get_price_history(canonical_id, days)` | histórico real de observações persistidas |
+| `get_recent_changes(threshold_pct)` | movimentos de preço acima de um limiar |
+| `get_source_summary()` | cobertura, disponibilidade e liderança de preço por fonte |
+| `get_history_maturity()` | quanto do catálogo já sustenta análise de variação |
+| `get_collection_health(limit)` | saúde das últimas execuções de coleta |
 
-Mostra se a informação é confiável antes de interpretá-la:
+O agente (`agent.py`) usa o SDK oficial do **Groq** e o cliente **MCP** puro via stdio — sem LangChain, LangGraph ou outro framework de orquestração. O fluxo é: pergunta → agente escolhe tools → tools consultam analytics/banco → evidências reais → síntese executiva. O LLM **não calcula** preço, mediana, spread, disponibilidade ou variação — ele interpreta o que as tools já calcularam, e o prompt do sistema exige separar achado, evidência e limitação.
 
-- taxa de sucesso;
-- cobertura por fonte;
-- método HTTP/Playwright;
-- método de extração;
-- falhas recentes;
-- rastreabilidade;
-- maturidade do histórico.
+**Guardrails do agente**, ativos porque o dashboard é público: limite de caracteres por pergunta, limite de tokens e de etapas por resposta (até 4), limite de tool calls por resposta (até 8), truncamento de resultado de tool, bloqueio de chamada duplicada, cache por pergunta+versão dos dados, intervalo mínimo entre pedidos por sessão, timeout com tratamento amigável de erros temporários (429/5xx). Detalhes em [`docs/case-study.md`](docs/case-study.md).
 
-### Método & decisões
-
-Documenta dentro do próprio produto:
-
-- por que HTTP vem antes do Playwright;
-- como produto canônico é definido;
-- por que seller e source são separados;
-- por que os indicadores são determinísticos;
-- onde MCP e IA entram;
-- quais problemas reais apareceram durante o desenvolvimento.
-
----
-
-# MCP + AI Market Analyst
-
-O servidor MCP expõe ferramentas como:
+## Arquitetura
 
 ```text
-compare_market()
-compare_product(canonical_id)
-get_price_history(canonical_id, days)
-get_recent_changes(threshold_pct)
-get_source_summary()
-get_history_maturity()
-get_collection_health(limit)
+config/products.yml → Catalog Sync → Coleta (HTTP + fallback Playwright)
+        → Price Observation → PostgreSQL/SQLite
+        → Analytics → Dashboard (Streamlit) + MCP Server → AI Market Analyst
 ```
 
-O agente escolhe as ferramentas necessárias para responder à pergunta.
+Diagrama completo e decisões por camada: [`docs/architecture.md`](docs/architecture.md).
 
-Fluxo:
+## Case técnico
 
-```text
-Pergunta do usuário
-      ↓
-AI Market Analyst
-      ↓
-MCP tools
-      ↓
-Analytics / PostgreSQL
-      ↓
-Evidências reais
-      ↓
-Síntese executiva
-```
+Contexto, critérios de sucesso, raciocínio de design e desafios reais encontrados durante o desenvolvimento (robots.txt, HTML variável entre fontes, marketplace duplicando concorrente, histórico insuficiente): [`docs/case-study.md`](docs/case-study.md).
 
-O prompt do agente exige separar **achado, evidência e limitação**, além de explicitar quando o histórico ainda é insuficiente.
+## Modo público x pipeline completo
 
----
+**FULL LOCAL MODE** — Collectors → PostgreSQL → Analytics → Dashboard. Ambiente Docker local, com coleta real via CLI/scheduler.
 
-# Modelo de dados
+**PUBLIC DEMO MODE** — Snapshot SQLite real (exportado do PostgreSQL) → Analytics → Dashboard → IA opcional. É a versão que roda em ambientes públicos gratuitos (ex.: Streamlit Community Cloud).
 
-Principais entidades:
+O modo é decidido automaticamente: se a variável `DATABASE_URL` não estiver definida e existir um snapshot exportado em `data/demo/`, o dashboard sobe em SQLite, **somente leitura** — o botão de coleta não existe em nenhum modo; coletar é sempre uma operação de CLI. Trate a versão pública como um **snapshot de mercado**, não como monitoramento em tempo real: os números refletem a última exportação, não o segundo atual.
 
-```text
-products
-competitors
-listings
-price_observations
-collection_runs
-```
+## Como executar localmente
 
-Cada observação preserva:
-
-```text
-produto canônico
-fonte
-seller
-preço
-moeda
-disponibilidade
-URL
-timestamp
-origem da coleta
-método de extração
-HTTP status
-sucesso/falha
-erro
-```
-
-Listings removidos do YAML são marcados como `active=false` em vez de apagados, preservando rastreabilidade.
-
----
-
-# Relatório executivo
-
-O projeto gera um brief em Markdown com:
-
-- pergunta de negócio;
-- resposta executiva;
-- maiores dispersões;
-- leitura por fonte;
-- movimentos relevantes;
-- maturidade do histórico;
-- saúde da última execução;
-- nota metodológica.
-
-```powershell
-docker compose exec dashboard python -m src.competitive_intelligence.cli report
-```
-
----
-
-# Estrutura
-
-```text
-competitive-intelligence-agent/
-├── .streamlit/
-│   └── config.toml
-├── config/
-│   └── products.yml
-├── dashboard/
-│   └── app.py
-├── docs/
-│   ├── architecture.md
-│   └── case-study.md
-├── reports/
-├── scripts/
-│   └── run_scheduler.py
-├── src/
-│   └── competitive_intelligence/
-│       ├── collectors/
-│       │   ├── base.py
-│       │   └── generic.py
-│       ├── agent.py
-│       ├── analytics.py
-│       ├── cli.py
-│       ├── config.py
-│       ├── db.py
-│       ├── mcp_server.py
-│       ├── models.py
-│       ├── reporting.py
-│       ├── robots.py
-│       └── service.py
-├── tests/
-├── .env.example
-├── docker-compose.yml
-├── Dockerfile
-├── pyproject.toml
-└── requirements.txt
-```
-
----
-
-# Executando com Docker
-
-## 1. Ambiente
+### Pipeline completo (Docker + PostgreSQL)
 
 ```powershell
 Copy-Item .env.example .env
-```
-
-A IA é opcional. Para habilitar o agente:
-
-```text
-GROQ_API_KEY=sua_chave
-```
-
-Nunca versione o `.env`.
-
-## 2. Suba banco e dashboard
-
-```powershell
 docker compose up --build -d db dashboard
-```
-
-Acesse:
-
-```text
-http://localhost:8501
-```
-
-## 3. Sincronize o catálogo
-
-```powershell
 docker compose exec dashboard python -m src.competitive_intelligence.cli init
+docker compose exec dashboard python -m src.competitive_intelligence.cli discover --target 100
+docker compose exec dashboard python -m src.competitive_intelligence.cli collect
+docker compose exec dashboard python -m src.competitive_intelligence.cli report
+docker compose exec dashboard python -m src.competitive_intelligence.cli export-demo --overwrite
 ```
 
-## 4. Execute uma coleta
+`GROQ_API_KEY` no `.env` é opcional, só necessária para o Analista de IA. Nunca versione o `.env`. Scheduler opcional: `docker compose --profile scheduler up -d scheduler`.
 
-Pelo dashboard: **Executar coleta**.
+### Dashboard sobre o snapshot público
 
-Ou:
+Sem `DATABASE_URL` definida e com `data/demo/competitive_intelligence_demo.db` presente (já versionado), basta subir o dashboard:
 
 ```powershell
-docker compose exec dashboard python -m src.competitive_intelligence.cli collect
+docker compose up --build -d dashboard
 ```
 
-## 5. Testes
+Acesse `http://localhost:8501`. Para habilitar a IA nesse modo, defina apenas `GROQ_API_KEY` (nos Secrets, em deploy no Streamlit Cloud).
+
+## Testes
 
 ```powershell
 docker compose exec dashboard pytest -q
 ```
 
-## 6. Scheduler opcional
+Suíte com 32 testes. Na revisão desta documentação, 30 passam; 2 falham em `tests/test_catalog_config.py` porque ainda assumem o catálogo antigo (20 produtos, e um produto sem MPN cadastrado) — deixado registrado aqui como pendência real de manutenção, não escondido.
 
-```powershell
-docker compose --profile scheduler up -d scheduler
-```
+## Limitações
 
----
-
-# O que este projeto demonstra
-
-Mais do que uma stack, o case mostra uma sequência de raciocínio:
-
-```text
-Problema operacional
-        ↓
-Definição do que precisa ser medido
-        ↓
-Escolha das fontes
-        ↓
-Arquitetura de coleta
-        ↓
-Tratamento de falhas reais
-        ↓
-Modelagem e histórico
-        ↓
-Analytics determinístico
-        ↓
-Comunicação executiva
-        ↓
-IA como camada de investigação
-```
-
-A intenção não é construir “um scraper com IA”.
-
-É construir um **sistema de inteligência competitiva** em que coleta, qualidade, análise e interpretação possuem responsabilidades separadas.
-
----
-
-# Limitações e próximos passos
-
-- páginas públicas podem mudar de estrutura;
+- páginas públicas podem mudar de estrutura a qualquer momento;
 - preço observado não inclui necessariamente frete, cupom ou condição personalizada;
 - disponibilidade publicada pode não refletir estoque físico em tempo real;
-- ampliar o catálogo aumenta a necessidade de manutenção dos adapters;
-- tendência confiável depende da acumulação contínua de histórico;
-- regras de coleta e termos das fontes devem ser reavaliados periodicamente.
+- a versão pública é um snapshot, não uma coleta contínua — os números têm a data da última exportação;
+- tendência confiável depende de mais histórico acumulado (hoje, 25% do catálogo ativo já tem 2+ observações);
+- ampliar o catálogo aumenta a necessidade de manutenção dos adapters e do discovery.
 
-Evoluções possíveis:
+## Próximos passos
 
-- matching semiautomático de novos produtos;
-- alertas por e-mail/Slack;
-- scheduler gerenciado;
-- API para consumo externo;
-- relatório em PDF;
-- detecção de anomalias de coleta;
-- avaliação formal das respostas do agente;
-- deployment contínuo.
+- matching semiautomático de novos produtos a partir do discovery existente;
+- alertas por e-mail/Slack para movimentos relevantes;
+- scheduler gerenciado para coleta contínua fora do ambiente local;
+- API para consumo externo dos indicadores;
+- avaliação formal das respostas do agente de IA;
+- corrigir a suíte de testes do catálogo para refletir o tamanho atual.
 
----
+## Stack
+
+| Tecnologia | Papel real no projeto |
+|---|---|
+| Python | aplicação, collectors, analytics |
+| Pandas / NumPy | cálculo determinístico dos indicadores |
+| SQLAlchemy | acesso a banco (Postgres e SQLite) |
+| PostgreSQL | persistência do pipeline completo |
+| SQLite | snapshot público somente leitura |
+| Requests + BeautifulSoup4 | coleta HTTP e parsing |
+| Protego | interpretação de `robots.txt` |
+| Playwright | fallback de coleta via browser |
+| Streamlit | dashboard |
+| Plotly | visualização |
+| MCP (`mcp[cli]`) | ferramentas expostas ao agente de IA |
+| Groq | inferência do LLM do Analista de IA |
+| Docker / Docker Compose | ambiente reproduzível |
+| Pytest | testes |
 
 ## Uso responsável
 
-Projeto educacional/de portfólio. A coleta é restrita a páginas públicas explicitamente configuradas e deve respeitar políticas das fontes, `robots.txt`, limites de requisição e legislação aplicável. O sistema não implementa bypass de autenticação, CAPTCHA ou mecanismos de bloqueio.
-
----
-
-## Escala do catálogo: descoberta automática
-
-Para evitar manter manualmente centenas de URLs, o projeto possui uma etapa separada de **Product Discovery**. Ela usa páginas públicas reais, identifica produtos, procura o mesmo item nas demais fontes e só adiciona matches validados ao catálogo.
-
-O alvo padrão é **100 produtos canônicos**, exigindo pelo menos **2 fontes independentes** por produto.
-
-```bash
-python -m src.competitive_intelligence.cli discover --target 100
-```
-
-Depois da descoberta, os novos produtos são sincronizados no banco e passam a fazer parte das próximas coletas normalmente.
-
-Detalhes: [`docs/catalog-discovery.md`](docs/catalog-discovery.md).
+Projeto educacional/de portfólio. A coleta é restrita a páginas públicas explicitamente configuradas e respeita `robots.txt`, limites de requisição e a política publicada de cada fonte. O sistema não implementa bypass de autenticação, CAPTCHA ou mecanismos de bloqueio.
