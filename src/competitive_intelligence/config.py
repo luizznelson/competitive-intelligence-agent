@@ -8,6 +8,23 @@ from dotenv import load_dotenv
 ROOT = Path(__file__).resolve().parents[2]
 load_dotenv(ROOT / ".env")
 
+try:
+    # On Streamlit Cloud, values set under Settings -> Secrets live in
+    # st.secrets. Streamlit normally mirrors top-level secrets into
+    # os.environ automatically, but that mirroring only happens on a full
+    # process start - an incremental "hot" app update can leave a process
+    # running without it. Mirroring here too, with setdefault so an
+    # explicitly-set env var always wins, makes secrets take effect without
+    # depending on that timing. Wrapped in try/except because st.secrets
+    # raises when no secrets file exists (plain CLI/local runs) and because
+    # config.py must stay importable without a Streamlit runtime.
+    import streamlit as st
+
+    for _key, _value in st.secrets.items():
+        os.environ.setdefault(_key, str(_value))
+except Exception:
+    pass
+
 _explicit_database_url = os.getenv("DATABASE_URL")
 DEMO_DATABASE_PATH = ROOT / "data" / "demo" / "competitive_intelligence_demo.db"
 RUNTIME_DATABASE_PATH = ROOT / "data" / "competitive_intelligence.db"
